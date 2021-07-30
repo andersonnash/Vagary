@@ -29,11 +29,13 @@ Travel website
 
 ## Overview
 
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
-
+_**Project Title** 
+```
+Vagary - a latin word meaning a magical journey
 ### Team Members
 
-Created, designed, and developed by [James Madison](https://github.com/mishakessler), [George Washington](https://github.com/mishakessler), and [John Lansing, Jr.](https://github.com/mishakessler) (Git Czar) for the General Assembly Software Engineering Immersive (November '19 Cohort) Unit 3 Group Project.
+
+Created, designed, and developed by [Nash Anderson](https://github.com/andersonnash) (Git Czar), [Luz Lopez](https://github.com/mishakessler), and [Babak Bayati](https://github.com/mishakessler) [Tafari Bearsford] for the General Assembly Software Engineering Immersive (November '19 Cohort) Unit 3 Group Project.
 
 ### Team Expectations
 
