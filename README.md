@@ -35,7 +35,7 @@ Vagary - a latin word meaning a magical journey
 ### Team Members
 
 
-Created, designed, and developed by [Nash Anderson](https://github.com/andersonnash) (Git Czar), [Luz Lopez](https://github.com/mishakessler), and [Babak Bayati](https://github.com/mishakessler) [Tafari Bearsford] for the General Assembly Software Engineering Immersive (November '19 Cohort) Unit 3 Group Project.
+Created, designed, and developed by [Nash Anderson](https://github.com/andersonnash) (Git Czar), [Luz Lopez](https://github.com/luzmlx), [Babak Bayati](https://github.com/mishakessler), and [Tafari Bearsford](https://github.com/mishakessler) for the General Assembly Software Engineering Immersive (November '19 Cohort) Unit 3 Group Project.
 
 ### Team Expectations
 
