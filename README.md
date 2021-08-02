@@ -47,9 +47,8 @@ Digital assets used with full licensing and permission from [Death to Stock Phot
 
 ## MVP
 
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+_The **Vagary** MVP  - We want a travel site where someone can create a profile, add an itinerary to their profile, and from their itinerary page, add a todo list to their vacation - a packing list, and things to do while on vacation. The user will be able to edit and delete todos or their vacation plans.
 
 <br>
 
@@ -119,7 +118,6 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Component Hierarchy
 
-> Use this section to define your React components and the data architecture of your app.
 [Comp Heirarchy] https://lucid.app/lucidchart/invitations/accept/inv_647e7acb-d6d3-4fda-9f95-130898d9ece4?viewport_loc=-80%2C-15%2C2081%2C1112%2C0_0
 
 ``` structure
@@ -156,23 +154,39 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Seting up API Config    |    H     |     1.5 hrs      |      hrs     |     hrs    |
-| Create Models       |    H     |     1 hrs      |      hrs     |     TBD     |
+| Seting up API Config    |    H     |     1.5 hrs      |      hrs     |     hrs    
+| Connections         |    H     |      1hrs      |      hrs     |     TBD     |
+| Server              |    H     |      1hrs      |      hrs     |     TBD     |
+| User Controller      |    H     |      2hrs      |      hrs     |     TBD     |
+| Todo Controller      |    H     |     2hrs      |      hrs     |     TBD     |
+| User Model          |    H     |     2 hrs      |      hrs     |     TBD     |
+| Todo Model          |    H     |      2hrs      |      hrs     |     TBD     |
+| Itinerary Model     |    H     |      3hrs      |      hrs     |     TBD     |
+| Navbar              |    H     |     2hrs      |      hrs     |     TBD     |
+| Header              |    H     |      2hrs      |      hrs     |     TBD     |
+| Footer              |    H     |      2hrs      |      hrs     |     TBD     |
+| Hamburger Menu      |    H     |      2hrs      |      hrs     |     TBD     |
+| Media Query         |    H     |      2hrs      |      hrs     |     TBD     |
 | Rendering Data      |    H     |      3hrs      |      hrs     |     TBD     |
+| Galery Slideshow    |    H     |      3hrs      |      hrs     |     TBD     |
+| User Profile Page   |    H     |      3hrs      |      hrs     |     TBD     |
+| Edit Page           |    H     |      3hrs      |      hrs     |     TBD     |
 | Routes              |    H     |     2 hrs      |      hrs     |     TBD     |
 | Postman Trials      |    H     |     2 hrs      |      hrs     |     TBD     |
-| Sign Up Comp        |    H     |     2 hrs      |      hrs     |     TBD     |
-| Sign In Comp        |    H     |     2 hrs      |      hrs     |     TBD     |
-| Create Comp         |    H     |     2 hrs      |      hrs     |     TBD     |
-| Update Comp         |    H     |     2 hrs      |      hrs     |     TBD     |
-| Edit Comp           |    H     |     2 hrs      |      hrs     |     TBD     |
-| Delet Comp          |    H     |     3 hrs      |      hrs     |     TBD     |
+| Itinerary View      |    H     |      3hrs      |      hrs     |     TBD     |
+| Sign Up View        |    H     |     2 hrs      |      hrs     |     TBD     |
+| Sign In View        |    H     |     2 hrs      |      hrs     |     TBD     |
+| Create View         |    H     |     2 hrs      |      hrs     |     TBD     |
+| Update View         |    H     |     2 hrs      |      hrs     |     TBD     |
+| Homepage View       |    H     |      2hrs      |      hrs     |     TBD     |
+| Edit View           |    H     |     2 hrs      |      hrs     |     TBD     |
+| Delete              |    H     |     3 hrs      |      hrs     |     TBD     |
 | Media Query         |    H     |     2 hrs      |      hrs     |     TBD     |
 | CSS                 |    H     |     3 hrs      |      hrs     |     TBD     |
 | Tailwind            |    H     |     3 hrs      |      hrs     |     TBD     |
 | Netlify Deploy      |    H     |     1 hrs      |      hrs     |     TBD     |
 | Heroku Deployment   |    H     |     1 hrs      |      hrs     |     TBD     |
-| TOTAL               |          |     31 hrs     |     hrs      |     TBD     |
+| TOTAL               |          |     60 hrs     |     hrs      |     TBD     |
 
 
 
@@ -181,7 +195,54 @@ src
 ### Server (Back End)
 
 #### ERD Model
+```
+import mongoose from "mongoose";
+const Schema = mongoose.Schema;
 
+const UserSchema = new Schema(
+  {
+    username: { type: String, required: true, unique: true },
+    email: { type: String, required: true, unique: true },
+    password_digest: {type: String, required: true, Select: false}
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model("User", UserSchema);
+
+import mongoose from "mongoose";
+const Schema = mongoose.Schema;
+
+const ItinerarySchema = new Schema(
+  {
+    location: { type: String, required: true },
+    imageURL: { type: String, required: true },
+    description: { type: String, required: true },
+    date: {type: String, required: false},
+    flightInfo: {type: String, required: false},
+    user_id: [{ type: Schema.Types.ObjectId, ref: "User" }],
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model("Itinerary", ItinerarySchema);
+
+import mongoose from "mongoose";
+const Schema = mongoose.Schema;
+
+const TodoSchema = new Schema(
+  {
+    name: { type: String, required: true },
+    description: { type: String, required: true },
+    Itinerary: [{ type: Schema.Types.ObjectId, ref: "Itinerary" }],
+    user_id: [{ type: Schema.Types.ObjectId, ref: "User" }],
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model("Todo", TodoSchema);
+
+```
 
 #### Data Heirarchy
 
