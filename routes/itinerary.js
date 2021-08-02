@@ -1,19 +1,19 @@
 import {Router} from "express"
 import restrict from "../helpers/restrict.js"
-import {} from "../controllers/itineraries.js"
+import {getAllItinerary, getItineray, createItinerary, updateItinerary, deleteItinerary} from "../controllers/itineraries.js"
 
 
 
 const router = Router();
 // get all Internaries
-router.get("/itineraries", restrict, getAllTodos)
+router.get("/itineraries", restrict, getAllItinerary)
 // get Intinerary id
-router.get("itineraries/:id", getTodo)
+router.get("itineraries/:id", getItineray)
 // post created Intinerary
-router.post("/itineraries", restrict, createTodo)
+router.post("/itineraries", restrict, createItinerary)
 // update Itinerary (PUT)
-router.put("/itineraries/:id", restrict, updateTodo)
+router.put("/itineraries/:id", restrict, updateItinerary)
 // delete Itinerary
-router.delete("/itineraries/:id", restrict, deleteTodo)
+router.delete("/itineraries/:id", restrict, deleteItinerary)
 
 export default router
