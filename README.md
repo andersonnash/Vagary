@@ -57,11 +57,14 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- Full CRUD
+-Creat User, Sign In, Sign Out
+-Form for adding and or modifying itinerary
+-Media Query/Responsive Design
+-Working submit buttons
+-Tailwind
+
+
 
 <br>
 
@@ -71,11 +74,19 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | JS Library for building UI |
+|  React-Router-Dom| Connecting routes/components|
+|  Axios           | For API requests |
+| Morgan           | Middleware for handeling API |
+|     Express      | Creating a backend database |
+|       Cors       | It allows or restricts restricted resources ona webserver|
+|  Mongoose        | Object data modeling |
+|  JWT             | Security function that hashes user data and passwords |
+|  Nodemon         | restarts application once something is changed and saved in the file |
+
+
+
+
 
 <br>
 
@@ -83,7 +94,7 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views.
+[wireframes]```https://www.figma.com/file/oLKO9SM34Of9YwHuvSvgea/Wireframe?node-id=0%3A1```
 
 ![Dummy Link](url)
 
@@ -112,6 +123,7 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 #### Component Hierarchy
 
 > Use this section to define your React components and the data architecture of your app.
+[Comp Heirarchy]```https://lucid.app/lucidchart/34c50e4a-6e56-42b7-b840-99d4ac85ab98/edit?beaconFlowId=60130015EADA4F8A&page=0_0#```
 
 ``` structure
 
@@ -135,8 +147,13 @@ src
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
 |    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
 |  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
+|   Sign Up    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
+| Sign In      | functional |   n   |   y   | _The cards will render the post info via props._                 |
+| Create       | functional |   n   |   y   | _The cards will render the post info via props._                 |
+| Update       | functional |   n   |   y   | _The cards will render the post info via props._                 |
+| Galery       | functional |   n   |   y   | _The cards will render the post info via props._                 |
+| Itinerary Card| functional |   n   |   y   | _The cards will render the post info via props._                 |
+
 |    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
 
 #### Component Estimates
@@ -145,11 +162,25 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Seting up API Config    |    H     |     1.5 hrs      |      hrs     |     hrs    |
+| Create Models       |    H     |     1 hrs      |      hrs     |     TBD     |
+| Rendering Data      |    H     |      3hrs      |      hrs     |     TBD     |
+| Routes              |    H     |     2 hrs      |      hrs     |     TBD     |
+| Postman Trials      |    H     |     2 hrs      |      hrs     |     TBD     |
+| Sign Up Comp        |    H     |     2 hrs      |      hrs     |     TBD     |
+| Sign In Comp        |    H     |     2 hrs      |      hrs     |     TBD     |
+| Create Comp         |    H     |     2 hrs      |      hrs     |     TBD     |
+| Update Comp         |    H     |     2 hrs      |      hrs     |     TBD     |
+| Edit Comp           |    H     |     2 hrs      |      hrs     |     TBD     |
+| Delet Comp          |    H     |     3 hrs      |      hrs     |     TBD     |
+| Media Query         |    H     |     2 hrs      |      hrs     |     TBD     |
+| CSS                 |    H     |     3 hrs      |      hrs     |     TBD     |
+| Tailwind            |    H     |     3 hrs      |      hrs     |     TBD     |
+| Netlify Deploy      |    H     |     1 hrs      |      hrs     |     TBD     |
+| Heroku Deployment   |    H     |     1 hrs      |      hrs     |     TBD     |
+| TOTAL               |          |     31 hrs     |     hrs      |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evalute possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+
 
 <br>
 
@@ -162,6 +193,7 @@ src
 #### Data Heirarchy
 
 > Use this section to display the database, table, and attribute heirarchy.
+
 
 ``` structure
 
@@ -177,8 +209,11 @@ database_db
 ***
 
 ## Post-MVP
-
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+```
+-Intergrate Instagram
+-Integrate Calendar
+-Travel Quiz
+```
 
 ***
 
