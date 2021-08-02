@@ -123,7 +123,7 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 #### Component Hierarchy
 
 > Use this section to define your React components and the data architecture of your app.
-[Comp Heirarchy]```https://lucid.app/lucidchart/34c50e4a-6e56-42b7-b840-99d4ac85ab98/edit?beaconFlowId=60130015EADA4F8A&page=0_0#```
+[Comp Heirarchy] https://lucid.app/lucidchart/34c50e4a-6e56-42b7-b840-99d4ac85ab98/edit?beaconFlowId=60130015EADA4F8A&page=0_0#
 
 ``` structure
 
