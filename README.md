@@ -2,9 +2,7 @@
 Travel website
 # PROJECT 3 README <!-- omit in toc -->
 
-> The Project Planning section **should be completed** for your project pitch with instructors.
 >
-> To ensure correct Markdown, I recommend cloning this wiki and copy/pasting the raw template code.
 
 - [Overview](#Overview)
   - [Team Members](#Team-Members)
@@ -70,7 +68,6 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 ### Libraries
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project.
 
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
@@ -141,7 +138,6 @@ src
 
 #### Component Breakdown
 
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
@@ -157,7 +153,6 @@ src
 
 #### Component Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
@@ -187,11 +182,9 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model.
 
 #### Data Heirarchy
 
-> Use this section to display the database, table, and attribute heirarchy.
 
 
 ``` structure
@@ -218,8 +211,6 @@ database_db
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution, if you'd like.
