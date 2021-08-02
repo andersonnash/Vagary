@@ -94,7 +94,7 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Wireframes
 
-[wireframes]```https://www.figma.com/file/oLKO9SM34Of9YwHuvSvgea/Wireframe?node-id=0%3A1```
+[wireframes] https://www.figma.com/file/oLKO9SM34Of9YwHuvSvgea/Wireframe?node-id=0%3A1
 
 ![Dummy Link](url)
 
