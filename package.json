@@ -2,13 +2,11 @@
   "name": "vagary",
   "version": "1.0.0",
   "description": "Travel website # PROJECT 3 README <!-- omit in toc -->",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "nodemon server.js"
-
   },
   "repository": {
     "type": "git",
