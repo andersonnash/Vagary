@@ -198,7 +198,7 @@ const ItinerarySchema = new Schema(
     description: { type: String, required: true },
     date: {type: String, required: false},
     flightInfo: {type: String, required: false},
-    user_id: [{ type: Schema.Types.ObjectId, ref: "User" }],
+    user_id: { type: Schema.Types.ObjectId, ref: "User" },
   },
   { timestamps: true }
 );
@@ -212,8 +212,8 @@ const TodoSchema = new Schema(
   {
     name: { type: String, required: true },
     description: { type: String, required: true },
-    Itinerary: [{ type: Schema.Types.ObjectId, ref: "Itinerary" }],
-    user_id: [{ type: Schema.Types.ObjectId, ref: "User" }],
+    itinerary_id: { type: Schema.Types.ObjectId, ref: "Itinerary" },
+    user_id: { type: Schema.Types.ObjectId, ref: "User" },
   },
   { timestamps: true }
 );
