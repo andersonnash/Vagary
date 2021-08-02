@@ -92,29 +92,7 @@ _The **Vagary** MVP  - We want a travel site where someone can create a profile,
 
 [wireframes] https://www.figma.com/file/oLKO9SM34Of9YwHuvSvgea/Wireframe?node-id=0%3A1
 
-![Dummy Link](url)
 
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 #### Component Hierarchy
 
