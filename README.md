@@ -147,13 +147,12 @@ src
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
 |    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
 |  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Sign Up    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Sign In      | functional |   n   |   y   | _The cards will render the post info via props._                 |
-| Create       | functional |   n   |   y   | _The cards will render the post info via props._                 |
-| Update       | functional |   n   |   y   | _The cards will render the post info via props._                 |
-| Galery       | functional |   n   |   y   | _The cards will render the post info via props._                 |
-| Itinerary Card| functional |   n   |   y   | _The cards will render the post info via props._                 |
-
+|   Sign Up    |   class    |   y   |   n   | Alow new user to sign up                                         |
+| Sign In      | functional |   n   |   y   | Alow user to sign in                                             |
+| Create       | functional |   n   |   y   | User will be able to create an itinerary in their profiles       |
+| Update       | functional |   n   |   y   | Update itinerary                                                 |
+| Galery       | functional |   n   |   y   | Render a slideshow on the homepage                               |
+| Itinerary Card| functional |   n   |   y   | Will display a photo of user's destination                      |
 |    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
 
 #### Component Estimates
