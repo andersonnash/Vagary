@@ -1,20 +1,22 @@
 import mongoose from "mongoose";
-
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/vagary";
-
-mongoose.set("debug", true);
+let MONGODB_URI =
+  process.env.PROD_MONGODB || "mongodb://127.0.0.1:27017/vagary";
 mongoose.set("useCreateIndex", true);
-mongoose.set("returnOriginal", true)
-
-mongoose.connect(MONGODB_URI, {
-  useUnifiedTopology: true,
-  useNewUrlParser: true,
-})
+mongoose.set("returnOriginal", false);
+mongoose
+  .connect(MONGODB_URI, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useFindAndModify: false,
+  })
   .catch((error) =>
-    console.error("Error connecting to MongoDB:", error.message)
+    console.error("Error connecting to MongoDB: ", error.message)
+  );
+mongoose.connection.on("disconnected", () =>
+  console.log(`Disconnected from MongoDB!`)
 );
-  
-mongoose.connection.on("error", (error) => console.error(`MongoDB connection error: ${error.message}`)
+mongoose.connection.on("error", (error) =>
+  console.error(`MongoDB connection error: ${error}`)
 );
-
-mongoose.connection.on("disconnected", () => console)
+// Export the connection
+export default mongoose.connection;

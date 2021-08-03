@@ -1,4 +1,4 @@
-import Todo from "../models/todos.js";
+import Todo from "../models/todo.js";
 import User from "../models/user.js";
 
 export const getAllTodos = async (req, res) => {
@@ -26,11 +26,15 @@ export const getTodo = async (req, res) => {
 
 export const createTodo = async (req, res) => {
   try {
-    let { name, description, itinerary_id, user_id } = req.body;
+    let { name, description, location, image_URL, date, fligt_info, user_id } =
+      req.body;
     let newTodo = {
       name,
       description,
-      itinerary_id,
+      location,
+      image_URL,
+      date,
+      fligt_info,
       user_id,
     };
     let foundUser = await User.find({ username: user_id });
