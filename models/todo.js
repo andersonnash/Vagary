@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
-const TodoSchema = new Schema(
+const Todo = new Schema(
   {
     name: { type: String, required: true },
     description: { type: String, required: true },
@@ -14,4 +14,4 @@ const TodoSchema = new Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("Todo", TodoSchema);
+export default mongoose.model("Todo", Todo);

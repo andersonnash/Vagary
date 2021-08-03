@@ -11,5 +11,6 @@ router.post("/sign-up", signUp);
 router.post("/sign-in", signIn);
 // Verify : GET
 router.get("/verify", verify);
+router.post("/change-password");
 
 export default router;
