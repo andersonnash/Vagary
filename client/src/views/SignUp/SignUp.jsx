@@ -1,6 +1,6 @@
 import {useState} from 'react'
-import {signUp} from "../../services/users"
-import { useHistory } from 'react-router-dom'
+// import {signUp} from "../../services/users"
+import { Link, useHistory } from 'react-router-dom'
 
 export default function SignUp(props) {
     const [input, setInput] = useState({username: "", email: "", password:""})
@@ -9,7 +9,7 @@ export default function SignUp(props) {
     const handleSubmit = async(e) => {
         e.preventDefault();
 
-        const user = await signUp(input);
+        const user = await SignUp(input);
         // console.log(user)
         props.setUser(user)
         history.push("/")
@@ -51,7 +51,9 @@ export default function SignUp(props) {
           value={input.password}
           onChange={handleInput}
         />
-        <button className="signup-button">Sign Up</button>
+        <button className="signup-button">
+            <Link to ="userpage">Create Account</Link>
+        </button>
             </form>
         </div>
     )
