@@ -1,13 +1,16 @@
-import SignIn from "./views/signIn/SignIn";
+
 import "./App.css";
-// import { Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Navbar from "./views/navbar/NavBar";
+import SignIn from "./views/signIn/SignIn";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <SignIn />
+      <Route path="/sign-in">
+        <SignIn />
+      </Route>
     </div>
   );
 }
