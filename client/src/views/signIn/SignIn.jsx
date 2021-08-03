@@ -1,6 +1,7 @@
 import {useState} from "react";
-import {signIn} from "../../services/users"
+// import {signIn} from "../../services/users"
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export default function SignIn(props) {
@@ -24,7 +25,7 @@ const handleInput = (e) => {
 }
 
     return (
-      <div>
+      <div >
         Sign In
         <form className="signin-form" onSubmit={handleSubmit}>
             <label>Email</label>
@@ -44,8 +45,9 @@ const handleInput = (e) => {
             />
             <br />
 
-            <button className="signin-button">Sign In</button>
+            <button className="signin-button">
+                <Link to="/">Sign In</Link></button>
         </form>
-      </div>  
+      </div >  
     )
 }
