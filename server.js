@@ -13,4 +13,4 @@ app.use(morgan("dev"));
 
 app.get("/", (req, res) => { console.log(req); res.send("<h1>Vagary baby</h1>")});
 
-app.listen(PORT, console.log("We are connected to 4555!"));
+app.listen(PORT, console.log(`Connected to port ${PORT}`));
