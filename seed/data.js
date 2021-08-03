@@ -20,6 +20,23 @@ const insertData = async () => {
   });
   await user2.save();
 
+
+  const user3 = new User({
+    username: 'Tafari',
+    email: 'Tafari@gmail.com',
+    password_digest: await bcrypt.hash('tafari01', 12),
+  });
+  await user3.save();
+
+  const user4 = new User({
+    username: 'Babak',
+    email: 'Babak@gmail.com',
+    password_digest: await bcrypt.hash('babak01', 12),
+  });
+  await user4.save();
+
+
+
   const todos = [
     {
       name: 'America',
@@ -47,7 +64,7 @@ const insertData = async () => {
       location: 'Taksim Square',
       imageURL:
       'https://images.unsplash.com/photo-1622587853578-dd1bf9608d26?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-      user_id: user2,
+      user_id: user3,
       flightInfo:"Monday"
     },
 
@@ -56,7 +73,7 @@ const insertData = async () => {
       date: '08/10/2021',
       description: 'The Colosseum (/ˌkɒləˈsiːəm/ KOL-Ə-SEE-Əm; Italian: Colosseo [Kolosˈsɛːo]) Is An Oval Amphitheatre In The Centre Of The City Of Rome, Italy, Just East Of The Roman Forum.',
       imageURL: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1286&q=80',
-      user_id: user1,
+      user_id: user4,
       location: "Colosseum",
       flightInfo:"Monday"
     },
