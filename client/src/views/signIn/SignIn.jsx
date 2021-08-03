@@ -44,7 +44,7 @@ const handleInput = (e) => {
             />
             <br />
 
-            <button>Sign In</button>
+            <button className="signin-button">Sign In</button>
         </form>
       </div>  
     )
