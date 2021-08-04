@@ -1,21 +1,23 @@
 import { useState } from "react";
 // import { signIn } from "../../services/user";
 import { useHistory } from "react-router-dom";
+import "./SignIn.css"
+
 
 export default function SignIn(props) {
-  const [input, setInput] = useState({ email: "", username: "", password: "" });
-  const { setUser } = props;
-  const history = useHistory();
+    const [input, setInput] = useState({email: "", username: "", password: ""})
+    const { setUser} = props
+    const history = useHistory();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const user = await SignIn(input);
-    setUser(user);
+const handleSubmit = async(e) => {
+    e.preventDefault()
+    const user = await SignIn(input)
+    setUser(user)
     history.push("/");
-  };
+}
 
-  const handleInput = (e) => {
-    const { id, value } = e.target;
+const handleInput = (e) => {
+    const { id, value} = e.target
     setInput((prevInput) => ({
       ...prevInput,
       [id]: value,
@@ -24,9 +26,9 @@ export default function SignIn(props) {
 
   return (
     <div>
-      Sign In
       <form className="signin-form" onSubmit={handleSubmit}>
-        <label>Email</label>
+          <h3>Sign In</h3>
+        <label className="emaillabel">Email</label>
         <input
           id="email"
           type="email"
@@ -35,7 +37,7 @@ export default function SignIn(props) {
         />
         <br />
 
-        <label>Password</label>
+        <label className="passwordlabel">Password</label>
         <input
           id="password"
           type="password"
@@ -44,7 +46,7 @@ export default function SignIn(props) {
         />
         <br />
 
-        <button>Sign In</button>
+        <button className="signin-button">Sign In</button>
       </form>
     </div>
   );
