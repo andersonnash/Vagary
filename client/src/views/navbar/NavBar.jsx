@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { useState, useEffect } from "react";
 
-export default function Navbar() {
+const Navbar = () => {
   const [hamburger, setHamburger] = useState(false);
   const [visible, setVisible] = useState(false);
   const [windowDimension, setWindowDimension] = useState(null);
@@ -71,3 +71,4 @@ export default function Navbar() {
     </nav>
   );
 }
+export default Navbar;

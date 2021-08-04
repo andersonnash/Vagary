@@ -27,6 +27,7 @@ export const verify = async () => {
   if (token) {
     const res = await api.get("/verify");
     console.log(res.data);
+    return res.data;
   } else {
     return false;
   }
@@ -39,4 +40,9 @@ export const signOut = () => {
   } catch (error) {
     throw error;
   }
+};
+
+export const getUser = async (id) => {
+  const res = await api.get(`/user/${id}`);
+  return res.data;
 };
