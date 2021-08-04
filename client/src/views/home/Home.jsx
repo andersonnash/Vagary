@@ -5,8 +5,10 @@ import NavBar from "../navbar/NavBar.jsx";
 
 export default function Home(Props) {
   return (
-    <NavBar />
-    <div></div>
-    <Footer />
+    <div className="HomePage">
+      <NavBar />
+      
+      <Footer />
+    </div>
   )
 }
