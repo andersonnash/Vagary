@@ -26,9 +26,10 @@ const handleInput = (e) => {
 
   return (
     <div>
-      Sign In
+      
       <form className="signin-form" onSubmit={handleSubmit}>
-        <label>Email</label>
+          <h3>Sign In</h3>
+        <label className="emaillabel">Email</label>
         <input
           id="email"
           type="email"
@@ -37,7 +38,7 @@ const handleInput = (e) => {
         />
         <br />
 
-        <label>Password</label>
+        <label className="passwordlabel">Password</label>
         <input
           id="password"
           type="password"
@@ -46,7 +47,7 @@ const handleInput = (e) => {
         />
         <br />
 
-        <button>Sign In</button>
+        <button className="signin-button">Sign In</button>
       </form>
     </div>
   );
