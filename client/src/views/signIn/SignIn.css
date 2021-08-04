@@ -1,3 +1,13 @@
 @media (prefers-reduced-motion: no-preference) {
 
+body {
+    background-color: #f4f0bb;
+}
+
+.signin-form {
+background-color: cornflowerblue;
+border-style: dotted;
+padding-top: 5px;
+}
+
 }
