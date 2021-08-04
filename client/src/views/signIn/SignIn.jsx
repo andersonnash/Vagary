@@ -1,5 +1,5 @@
 import {useState} from "react";
-// import {signIn} from "../../services/users"
+import {signIn} from "../../services/users"
 import { useHistory } from "react-router-dom";
 import "./SignIn.css"
 
@@ -11,7 +11,7 @@ export default function SignIn(props) {
 
 const handleSubmit = async(e) => {
     e.preventDefault()
-    const user = await SignIn(input)
+    const user = await signIn(input)
     setUser(user)
     history.push("/");
 }
