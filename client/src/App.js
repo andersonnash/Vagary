@@ -1,4 +1,3 @@
-
 import "./App.css";
 import ImgSlide from "./views/home/ImgSlide";
 import { SlideData } from "./views/home/SlideData";
@@ -15,6 +14,7 @@ import SignIn from "./views/signIn/SignIn";
 import AllTodos from "./views/AllTodos/AllTodos";
 
 import SignUp from "./views/SignUp/SignUp";
+import TripDetails from "./views/tripDetails/TripDetails";
 
 function App() {
   
@@ -34,8 +34,14 @@ function App() {
       <Route path="/sign-in">
         <SignIn />
       </Route>
+<<<<<<< HEAD
+      <Route exact path to="/posts:id">
+        <TripDetails />
+      </Route>
+=======
       <Route path="/todos">
         <AllTodos user={user} />
+>>>>>>> 91db46428500485a776b0f2ad149ec359b8250e4
       <Route path="/sign-up">
         <SignUp />
       </Route>

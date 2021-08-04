@@ -7,9 +7,14 @@ const getToken = () => {
 };
 
 const api = axios.create({
+<<<<<<< HEAD
+  baseURL:
+    process.env.NODE_ENV === "production" ? "" : "http://localhost:4567/api",
+=======
   baseURL: process.env.NODE_ENV === 'production'
   ? ""
   : "http://localhost:4567/api",
+>>>>>>> 91db46428500485a776b0f2ad149ec359b8250e4
 });
 
 axios.interceptors.request.use(
