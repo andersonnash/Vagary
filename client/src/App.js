@@ -27,20 +27,16 @@ function App() {
     <div className="App">
       <Navbar />
       <Route exact path="/">
-        <ImgSlide slides={SlideData}/>
+        <ImgSlide slides={SlideData} />
       </Route>
-      
+
       <Route exact path="/sign-in">
         <SignIn />
       </Route>
       <Route path="/todos" />
-      <ImgSlide slides={SlideData} />
-      <Route path="/sign-in">
-        <SignIn />
-      </Route>
-      <Route exact path to="/posts:id">
-        <TripDetails />
-      </Route>
+
+      {/* <Route exact path to="/posts:id"> */}
+      <TripDetails />
       <Route path="/todos">
         <AllTodos user={user} />
       </Route>

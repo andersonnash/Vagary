@@ -14,8 +14,8 @@ export default function Post() {
 
   async function handleUser() {
     let res = await getUser(id);
-    // console.log(res)
-    setUser(res);
+    console.log(res);
+    setUser(res.id);
   }
 
   // const handleDelete = async () => {
@@ -35,10 +35,10 @@ export default function Post() {
         return (
           <div key={post._id}>
             <h3>
-              <Link to={`/user-homepage/${user._id}`}>{post.title}</Link>
+              <Link to={`/${user._id}`}>{post.title}</Link>
             </h3>
             <img src={post.imageURL} alt={post.title} />
-            <p>{post.content}</p>
+            <p>{post.description}</p>
           </div>
         );
       })}
