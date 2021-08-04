@@ -1,21 +1,23 @@
-import { useState } from "react";
-import { signIn } from "../../services/user";
+import {useState} from "react";
+// import {signIn} from "../../services/users"
 import { useHistory } from "react-router-dom";
+import "./SignIn.css"
+
 
 export default function SignIn(props) {
-  const [input, setInput] = useState({ email: "", username: "", password: "" });
-  const { setUser } = props;
-  const history = useHistory();
+    const [input, setInput] = useState({email: "", username: "", password: ""})
+    const { setUser} = props
+    const history = useHistory();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const user = await SignIn(input);
-    setUser(user);
+const handleSubmit = async(e) => {
+    e.preventDefault()
+    const user = await SignIn(input)
+    setUser(user)
     history.push("/");
-  };
+}
 
-  const handleInput = (e) => {
-    const { id, value } = e.target;
+const handleInput = (e) => {
+    const { id, value} = e.target
     setInput((prevInput) => ({
       ...prevInput,
       [id]: value,
