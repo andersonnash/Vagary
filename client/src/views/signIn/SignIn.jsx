@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { signIn } from "../../services/user";
+// import { signIn } from "../../services/user";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function SignIn(props) {
   const [input, setInput] = useState({ email: "", username: "", password: "" });
@@ -43,8 +44,9 @@ export default function SignIn(props) {
           onChange={handleInput}
         />
         <br />
-
-        <button>Sign In</button>
+{/* Once button is clicked it goes to UserPage */}
+        <button >
+            <Link to="userpage">Sign In</Link></button>
       </form>
     </div>
   );

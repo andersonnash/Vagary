@@ -1,3 +1,4 @@
+
 import "./App.css";
 import { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
@@ -6,6 +7,7 @@ import Navbar from "./views/navbar/NavBar";
 import SignIn from "./views/signIn/SignIn";
 import AllTodos from "./views/AllTodos/AllTodos";
 
+import SignUp from "./views/SignUp/SignUp";
 
 function App() {
   
@@ -27,6 +29,8 @@ function App() {
       </Route>
       <Route path="/todos">
         <AllTodos user={user} />
+      <Route path="/sign-up">
+        <SignUp />
       </Route>
     </div>
   );
