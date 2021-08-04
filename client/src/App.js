@@ -1,4 +1,3 @@
-
 import "./App.css";
 import ImgSlide from "./views/home/ImgSlide";
 import { SlideData } from "./views/home/SlideData";
@@ -11,16 +10,16 @@ import AllTodos from "./views/AllTodos/AllTodos";
 // import Home from "./views/home/Home";
 
 import SignUp from "./views/SignUp/SignUp";
+import TripDetails from "./views/tripDetails/TripDetails";
 
 function App() {
-  
   const [user, setUser] = useState(null);
 
   useEffect(() => {
     const fetchUser = async () => {
-      const user = await verify()
+      const user = await verify();
       user ? setUser(user) : setUser(null);
-    }
+    };
     fetchUser();
   }, []);
 
@@ -35,7 +34,16 @@ function App() {
         <SignIn />
       </Route>
       <Route path="/todos" />
+      <ImgSlide slides={SlideData} />
+      <Route path="/sign-in">
+        <SignIn />
+      </Route>
+      <Route exact path to="/posts:id">
+        <TripDetails />
+      </Route>
+      <Route path="/todos">
         <AllTodos user={user} />
+      </Route>
       <Route path="/sign-up">
         <SignUp />
       </Route>
