@@ -7,6 +7,8 @@ import { verify } from "./services/user";
 import Navbar from "./views/navbar/NavBar";
 import SignIn from "./views/signIn/SignIn";
 import AllTodos from "./views/AllTodos/AllTodos";
+// import Home from "./views/home/Home";
+
 import SignUp from "./views/SignUp/SignUp";
 import TripDetails from "./views/tripDetails/TripDetails";
 
@@ -24,6 +26,14 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <Route exact path="/">
+        <ImgSlide slides={SlideData}/>
+      </Route>
+      
+      <Route exact path="/sign-in">
+        <SignIn />
+      </Route>
+      <Route path="/todos" />
       <ImgSlide slides={SlideData} />
       <Route path="/sign-in">
         <SignIn />
