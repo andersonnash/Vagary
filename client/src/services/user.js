@@ -40,3 +40,8 @@ export const signOut = () => {
     throw error;
   }
 };
+
+export const getUser = async (id) => {
+  const res = await api.get(`/user/${id}`);
+  return res.data;
+};
