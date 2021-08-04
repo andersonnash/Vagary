@@ -8,31 +8,33 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .mobileClass {
+    /* border-style: dotted; */
+    padding-bottom: 70px;
+    width: 100%;
+    margin-bottom: 120px;
+    background-color: coral;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+ .bars {
+   width: 35px;
+   padding: 5px 5px 5px 5px;
+   /* border-style: dotted; */
+   background-color: burlywood;
+  float: right;
+  margin-top: 15px;
+  position: relative;
+  right: 10px;
+   
+ }
 
-.App-link {
-  color: #61dafb;
-}
+ .nav-items {
+   border-style: dotted;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   margin: 0px 100px 100px 100px;
+   
+ }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ }

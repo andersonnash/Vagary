@@ -2,6 +2,7 @@ import { useState } from "react";
 // import { signIn } from "../../services/user";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
+import "./SignIn.css"
 
 export default function SignIn(props) {
   const [input, setInput] = useState({ email: "", username: "", password: "" });
@@ -25,27 +26,29 @@ export default function SignIn(props) {
 
   return (
     <div>
-      Sign In
+      <h3>Sign in</h3>
       <form className="signin-form" onSubmit={handleSubmit}>
-        <label>Email</label>
+        <label className="email-label">Email</label>
         <input
           id="email"
           type="email"
+          placeholder="Email"
           value={input.email}
           onChange={handleInput}
         />
         <br />
 
-        <label>Password</label>
+        <label className="password-label">Password</label>
         <input
           id="password"
           type="password"
+          placeholder="Password"
           value={input.password}
           onChange={handleInput}
         />
         <br />
 {/* Once button is clicked it goes to UserPage */}
-        <button >
+        <button className = "signin-button">
             <Link to="userpage">Sign In</Link></button>
       </form>
     </div>
