@@ -3,7 +3,7 @@ import Todo from "../models/todo.js";
 
 export const getAllTodos = async (req, res) => {
   try {
-    const todos = await Todo.find().populate("user_id");
+    const todos = await Todo.find({});
     res.json(todos);
   } catch (e) {
     res.status(500).json({ error: e.message });
@@ -23,35 +23,6 @@ export const getTodo = async (req, res) => {
     res.status(500).json({ error: e.message });
   }
 };
-
-// export const createTodo = async (req, res) => {
-//   try {
-//     let { name, description, location, image_URL, date, flight_info, user_id } =
-//       req.body;
-//     let newTodo = {
-//       name,
-//       description,
-//       location,
-//       image_URL,
-//       date,
-//       flight_info,
-//       user_id,
-//     };
-//     let foundUser = await User.find({ username: user_id });
-//     if (foundUser) {
-//       newTodo.user_id = foundUser[0]._id;
-//     }
-//     const todo = await Todo.create(newPost);
-//     const todoId = todo._id;
-//     await User.findByIdAndUpdate(
-//       { _id: foundUser[0]._id },
-//       { push: { posts: todoId } }
-//     );
-//     return res.status(200).json(todo);
-//   } catch (err) {
-//     return res.status(500).json({ error: err.message });
-//   }
-// };
 
 export const createTodo = async (req, res) => {
   try {
