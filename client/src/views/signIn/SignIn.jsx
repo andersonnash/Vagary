@@ -1,23 +1,22 @@
-import {useState} from "react";
-// import {signIn} from "../../services/users"
+import { useState } from "react";
+import { signIn } from "../../services/user";
 import { useHistory } from "react-router-dom";
-import "./SignIn.css"
-
+import "./SignIn.css";
 
 export default function SignIn(props) {
-    const [input, setInput] = useState({email: "", username: "", password: ""})
-    const { setUser} = props
-    const history = useHistory();
+  const [input, setInput] = useState({ email: "", username: "", password: "" });
+  const { setUser } = props;
+  const history = useHistory();
 
-const handleSubmit = async(e) => {
-    e.preventDefault()
-    const user = await SignIn(input)
-    setUser(user)
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const user = await signIn(input);
+    setUser(user);
     history.push("/");
-}
+  };
 
-const handleInput = (e) => {
-    const { id, value} = e.target
+  const handleInput = (e) => {
+    const { id, value } = e.target;
     setInput((prevInput) => ({
       ...prevInput,
       [id]: value,
@@ -26,9 +25,8 @@ const handleInput = (e) => {
 
   return (
     <div>
-      
       <form className="signin-form" onSubmit={handleSubmit}>
-          <h3>Sign In</h3>
+        <h3>Sign In</h3>
         <label className="emaillabel">Email</label>
         <input
           id="email"

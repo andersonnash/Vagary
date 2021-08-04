@@ -34,7 +34,7 @@ function App() {
       <Route exact path="/sign-in">
         <SignIn />
       </Route>
-      <Route exact path to="/posts:id">
+      <Route path="/posts:id">
         <TripDetails />
       </Route>
       <Route path="/todos">
