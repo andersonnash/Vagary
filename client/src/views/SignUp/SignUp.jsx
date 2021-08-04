@@ -11,6 +11,7 @@ export default function SignUp() {
         console.log(user);
     };
 
+    
     const handleInput = (e) => {
         const { id, value } = e.target;
         setInput((prevInput) => ({
@@ -49,5 +50,6 @@ export default function SignUp() {
             </div>
         </Layout>
     );
-};
+
+}
 

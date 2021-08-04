@@ -3,12 +3,20 @@
 body {
     background-color: #f4f0bb;
 }
+nav {
+    /* border-style: dotted; */
+    margin: 0;
+    margin-bottom: 30px;
+    height: 70px;
+}
 
 .signin-form {
 background-color: cornflowerblue;
 border-style: dotted;
 padding-top: 5px;
 display: flex;
+flex-direction: column;
+margin-top: 200px;
 }
 
 }

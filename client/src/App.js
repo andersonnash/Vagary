@@ -12,7 +12,7 @@ import AllTodos from "./views/AllTodos/AllTodos";
 
 import SignUp from "./views/SignUp/SignUp";
 import TripDetails from "./views/tripDetails/TripDetails";
-import NewTodo from "./views/CreateTodo/CreateTodo";
+import NewTodo from "./views/createTodo/CreateTodo";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -32,11 +32,8 @@ function App() {
         <ImgSlide slides={SlideData}/>
       </Route>
       <Route exact path="/sign-in">
-        <SignIn />
-      </Route>
-      <Route path="/sign-in">
-        <SignIn />
-      </Route>
+        <SignIn setUser={setUser} user={user}  />
+      </Route> 
       <Route exact path="/posts:id">
         <TripDetails />
       </Route>
