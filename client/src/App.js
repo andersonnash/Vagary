@@ -2,11 +2,6 @@
 import "./App.css";
 import ImgSlide from "./views/home/ImgSlide";
 import { SlideData } from "./views/home/SlideData";
-
-function App() {
-  return <div className="App">
-    <ImgSlide slides={SlideData}/>;
-  </div>;
 import { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
 import { verify } from "./services/user";
@@ -31,10 +26,11 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <ImgSlide slides={SlideData}/>
       <Route path="/sign-in">
         <SignIn />
       </Route>
-      <Route path="/todos">
+      <Route path="/todos" />
         <AllTodos user={user} />
       <Route path="/sign-up">
         <SignUp />
