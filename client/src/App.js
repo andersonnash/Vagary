@@ -1,6 +1,7 @@
 import "./App.css";
 import ImgSlide from "./views/home/ImgSlide";
 import { SlideData } from "./views/home/SlideData";
+
 import { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
 import { verify } from "./services/user";
@@ -33,11 +34,7 @@ function App() {
       <Route exact path="/sign-in">
         <SignIn />
       </Route>
-      <Route path="/todos" />
-      <ImgSlide slides={SlideData} />
-      <Route path="/sign-in">
-        <SignIn />
-      </Route>
+
       <Route exact path to="/posts:id">
         <TripDetails />
       </Route>
