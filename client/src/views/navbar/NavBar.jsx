@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import React from "react";
 import { useState, useEffect } from "react";
 
@@ -47,22 +47,22 @@ const Navbar = () => {
             className="nav-items"
             style={{ display: hamburger && visible ? "flex" : "none" }}
           >
-            <Link to="/">Homepage</Link>
-            <Link to="/sign-in">Sign In</Link>
-            <Link to="/sign-up">Sign Up</Link>
+            <NavLink to="/">Homepage</NavLink>
+            <NavLink to="/sign-in">Sign In</NavLink>
+            <NavLink to="/sign-up">Sign Up</NavLink>
           </div>
         </div>
       ) : (
         <div className="desktopClass">
           <div className="menu">
             <button>
-              <Link to="/">Homepage</Link>
+              <NavLink to="/">Homepage</NavLink>
             </button>
             <button>
-              <Link to="/sign-in">Sign In</Link>
+              <NavLink to="/sign-in">Sign In</NavLink>
             </button>
             <button>
-              <Link to="/sign-up">Sign Up</Link>
+              <NavLink to="/sign-up">Sign Up</NavLink>
             </button>
           </div>
         </div>

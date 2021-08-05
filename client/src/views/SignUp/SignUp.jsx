@@ -21,8 +21,8 @@ export default function SignUp() {
   return (
     <Layout>
       <div>
-        SignUp
         <form onSubmit={handleSubmit}>
+          <h3> Sign Up</h3>
           <label>Username</label>
           <input
             id="username"

@@ -12,7 +12,7 @@
     /* border-style: dotted; */
     margin-bottom: 30px;
     height: 70px;
-}
+  }
   .mobileClass {
     /* border-style: dotted; */
     padding-bottom: 70px;
@@ -21,34 +21,29 @@
     background-color: coral;
   }
 
- .bars {
-   width: 35px;
-   padding: 5px 5px 5px 5px;
-   /* border-style: dotted; */
-   background-color: burlywood;
-  float: right;
-  margin-top: 15px;
-  position: relative;
-  right: 10px;
-   
- }
+  .bars {
+    width: 35px;
+    padding: 5px 5px 5px 5px;
+    /* border-style: dotted; */
+    background-color: burlywood;
+    float: right;
+    margin-top: 15px;
+    position: relative;
+    right: 10px;
+  }
 
-
- .nav-items {
-   border-style: dotted;
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   margin: 0px 100px 100px 100px;
+  .nav-items {
+    border-style: dotted;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 100px 100px 100px;
     top: 110px;
-   
- }
-
-
-
- }
+  }
+}
 .slider {
   position: relative;
+  margin-top: 150px;
   height: 100vh;
   display: flex;
   justify-content: center;
