@@ -7,9 +7,9 @@ import {getAllTodos, createTodo, getTodo, updateTodo, deleteTodo} from "../contr
 
 const router = Router();
 // get all todos
-router.get("/todos", restrict, getAllTodos)
+router.get("/todos", getAllTodos)
 // get todo id
-router.get("todos/:id", getTodo)
+router.get("/todos/:id", getTodo)
 // post created todo
 router.post("/todos", restrict, createTodo)
 // update todo (PUT)
@@ -17,4 +17,4 @@ router.put("/todos/:id", restrict, updateTodo)
 // delete Todo
 router.delete("/todos/:id", restrict, deleteTodo)
 
-export default router
+export default router;

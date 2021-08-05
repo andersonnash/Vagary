@@ -1,23 +1,75 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ImgSlide from "./views/home/ImgSlide";
+import { SlideData } from "./views/home/SlideData";
+
+import { useState, useEffect } from "react";
+import { Route } from "react-router-dom";
+import { verify } from "./services/user";
+import Navbar from "./views/navbar/NavBar";
+import SignIn from "./views/signIn/SignIn";
+import AllTodos from "./views/AllTodos/AllTodos";
+import UserHomePage from "./views/userHomepage/UserHomepage";
+// import Home from "./views/home/Home";
+
+import SignUp from "./views/SignUp/SignUp";
+import TripDetails from "./views/tripDetails/TripDetails";
+import NewTodo from "./views/createTodo/CreateTodo";
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verify();
+      user ? setUser(user) : setUser(null);
+    };
+    fetchUser();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Navbar />
+      <Route exact path="/">
+        <ImgSlide slides={SlideData} />
+      </Route>
+<<<<<<< HEAD
+      <Route path="/user-homepage">
+        <UserHomePage />
+      </Route>
+      <Route path="/sign-in">
+        <SignIn setUser={setUser} user={user} />
+      </Route>
+      <Route path="/trip-details">
+=======
+      <Route exact path="/sign-in">
+        <SignIn setUser={setUser} user={user}  />
+      </Route> 
+      <Route exact path="/posts:id">
+>>>>>>> 530c43207b5cc5a88568cd34f26bfc61208587f3
+        <TripDetails />
+      </Route>
+      <Route exact path="/todos">
+        <AllTodos user={user} />
+      </Route>
+<<<<<<< HEAD
+      <Route path="/new-todo">
+        <NewTodo />
+      </Route>
+      <Route path="/sign-up">
+=======
+      <Route exact path="/sign-up">
+>>>>>>> 530c43207b5cc5a88568cd34f26bfc61208587f3
+        <SignUp setUser={setUser} user={user} />
+      </Route>
+
+      
+        <Route path="/new-todo">
+          <NewTodo setUser={setUser} user={user} />
+        </Route>
+      
+
+      
     </div>
   );
 }

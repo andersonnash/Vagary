@@ -1,9 +1,10 @@
-import Todo from "../models/todos.js";
-import User from "../models/user.js";
+// import todo from "../models/todo.js";
+import Todo from "../models/todo.js";
+// import User from "../models/user.js";
 
 export const getAllTodos = async (req, res) => {
   try {
-    const todos = await Todo.find().populate("user_id");
+    const todos = await Todo.find({});
     res.json(todos);
   } catch (e) {
     res.status(500).json({ error: e.message });
@@ -26,26 +27,12 @@ export const getTodo = async (req, res) => {
 
 export const createTodo = async (req, res) => {
   try {
-    let { name, description, itinerary_id, user_id } = req.body;
-    let newTodo = {
-      name,
-      description,
-      itinerary_id,
-      user_id,
-    };
-    let foundUser = await User.find({ username: user_id });
-    if (foundUser) {
-      newTodo.user_id = foundUser[0]._id;
-    }
-    const todo = await Todo.create(newPost);
-    const todoId = todo._id;
-    await User.findByIdAndUpdate(
-      { _id: foundUser[0]._id },
-      { push: { posts: todoId } }
-    );
-    return res.status(200).json(todo);
-  } catch (err) {
-    return res.status(500).json({ error: err.message });
+    const todo = new Todo(req.body);
+    await todo.save();
+    res.status(201).json(todo);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: error.message });
   }
 };
 
