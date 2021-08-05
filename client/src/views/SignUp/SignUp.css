@@ -1,0 +1,27 @@
+@media (prefers-reduced-motion: no-preference) {
+
+    body {
+        background-color: #f4f0bb;
+    }
+    nav {
+        /* border-style: dotted; */
+        margin: 0;
+        margin-bottom: 30px;
+        height: 70px;
+    }
+    
+ .signup-form {
+    background-color: cornflowerblue;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+    margin: 200px auto 100px;
+    box-shadow: 
+        0 0 1px rgba(3, 4, 5, 6),
+        0 3px 8px rgba(3, 4, 5, 6)
+        ;
+        border-radius: 10px;
+    }
+    
+    }
