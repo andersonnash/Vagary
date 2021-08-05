@@ -28,6 +28,7 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <Route exact path="/">
         <ImgSlide slides={SlideData} />
       </Route>

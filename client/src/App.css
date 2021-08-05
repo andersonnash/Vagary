@@ -55,6 +55,7 @@
   align-items: center;
   margin-top: 240px;
   border-style: dashed;
+  /* animation: slider 2s ease-in-out infinite; */
 }
 
 .image {
@@ -85,4 +86,66 @@
   z-index: 10;
   cursor: pointer;
   user-select: none;
+}
+
+SlideData
+{
+  overflow: hidden;
+  height: 785px;
+}
+
+SlideData
+{
+  width: 500%;
+  position: relative;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+
+SlideData figure img
+{
+  width: 20%;
+  float: left;
+}
+
+@keyframes slider
+{
+  0%
+  {
+    left: 0;
+  }
+  
+  20%
+  {
+    left: 0;
+  }
+  25%
+  {
+    left: -100%;
+  }
+  45%
+  {
+    left: -100%;
+  }
+  50%
+  {
+    left: -200%;
+  }
+  70%
+  {
+    left: -200%;
+  }
+  75%
+  {
+    left: -300%;
+  }
+  95%
+  {
+    left: -300%;
+  }
+  100%
+  {
+    left: -400%;
+  }
 }
