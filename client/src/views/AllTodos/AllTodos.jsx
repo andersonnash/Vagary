@@ -19,7 +19,7 @@ export default function Home(props) {
     return (
         <Layout user={props.user} setUser={props.setUser}>
             {todos.map((todo) => (
-                <div>
+                <div className=' min-h-screen lg:grid lg:grid-cols-3 md:grid md:grid-cols-3'>
                     {todo.name}
                     <img src={todo.imageURL} alt={todo.name} />
                 

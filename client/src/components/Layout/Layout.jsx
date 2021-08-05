@@ -1,13 +1,13 @@
 import React from 'react';
-import Navbar from '../../views/navbar/NavBar';
-// import Footer from "../Footer/Footer";
+// import Navbar from '../../views/navbar/NavBar';
+import Footer from "../Footer/Footer";
 
 const Layout = (props) => {
     return (
         <div>
-            <Navbar user={props.user} setUser={props.setUser}/>
+            {/* <Navbar /> */}
             <div>{props.children}</div>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }

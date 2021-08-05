@@ -11,7 +11,7 @@ const api = axios.create({
     process.env.NODE_ENV === "production" ? "" : "http://localhost:4567/api",
 });
 
-axios.interceptors.request.use(
+api.interceptors.request.use(
   async (config) => {
     config.headers["Authorization"] = await getToken();
     return config;

@@ -37,7 +37,7 @@ function App() {
       <Route exact path="/posts:id">
         <TripDetails />
       </Route>
-      <Route path="/todos">
+      <Route exact path="/todos">
         <AllTodos user={user} />
       </Route>
       <Route exact path="/new-todo">
