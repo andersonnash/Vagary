@@ -50,7 +50,6 @@ const Navbar = () => {
             <Link to="/">Homepage</Link>
             <Link to="/sign-in">Sign In</Link>
             <Link to="/sign-up">Sign Up</Link>
-            <Link to="/iga">Living with IgA</Link>
           </div>
         </div>
       ) : (
@@ -70,5 +69,5 @@ const Navbar = () => {
       )}
     </nav>
   );
-}
+};
 export default Navbar;
