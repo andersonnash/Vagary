@@ -28,10 +28,12 @@ function App() {
 
   return (
     <div className="App">
+
       <Navbar />
       <Route exact path="/">
         <ImgSlide slides={SlideData} />
       </Route>
+<<<<<<< HEAD
       <Route path="/user-homepage">
         <UserHomePage />
       </Route>
@@ -39,17 +41,35 @@ function App() {
         <SignIn setUser={setUser} user={user} />
       </Route>
       <Route path="/trip-details">
+=======
+      <Route exact path="/sign-in">
+        <SignIn setUser={setUser} user={user}  />
+      </Route> 
+      <Route exact path="/posts:id">
+>>>>>>> 530c43207b5cc5a88568cd34f26bfc61208587f3
         <TripDetails />
       </Route>
-      <Route path="/todos">
+      <Route exact path="/todos">
         <AllTodos user={user} />
       </Route>
+<<<<<<< HEAD
       <Route path="/new-todo">
         <NewTodo />
       </Route>
       <Route path="/sign-up">
+=======
+      <Route exact path="/sign-up">
+>>>>>>> 530c43207b5cc5a88568cd34f26bfc61208587f3
         <SignUp setUser={setUser} user={user} />
       </Route>
+
+      
+        <Route path="/new-todo">
+          <NewTodo setUser={setUser} user={user} />
+        </Route>
+      
+
+      
     </div>
   );
 }
