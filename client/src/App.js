@@ -10,7 +10,7 @@ import SignIn from "./views/signIn/SignIn";
 import AllTodos from "./views/AllTodos/AllTodos";
 import UserHomePage from "./views/userHomepage/UserHomepage";
 // import Home from "./views/home/Home";
-
+import Layout from "./components/Layout/Layout";
 import SignUp from "./views/SignUp/SignUp";
 import TripDetails from "./views/tripDetails/TripDetails";
 import NewTodo from "./views/createTodo/CreateTodo";
@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <Layout setUser={setUser} user={user} />
       <Route exact path="/">
         <ImgSlide slides={SlideData} />
       </Route>

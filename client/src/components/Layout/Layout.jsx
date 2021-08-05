@@ -5,8 +5,9 @@ import Footer from "../Footer/Footer";
 const Layout = (props) => {
   return (
     <div>
-      <Navbar />
-      <div  className="">{props.children}</div>
+
+      <Navbar user={props.user} setUser={props.setUser} />
+      <div>{props.children}</div>
       <Footer />
     </div>
   );
