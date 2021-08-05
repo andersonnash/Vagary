@@ -29,7 +29,7 @@ export const getOneTodo = async (id) => {
 
 export const deleteOneTodo = async (id) => {
   try {
-    const res = await api.delete(`todos/${id}`);
+    const res = await api.delete(`/todos/${id}`);
     return res.data;
   } catch (e) {
     throw e;

@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 // import { getUser } from "../../services/user";
-import { useParams } from "react-router-dom";
-import { getOneTodo } from "../../services/todo";
+import { useParams, useHistory } from "react-router-dom";
+import { getOneTodo, deleteOneTodo } from "../../services/todo";
 import Layout from "../../components/Layout/Layout";
 
 export default function TodoDetail() {
   const [todo, setTodo] = useState({});
   const { id } = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     const fetchDetail = async () => {
@@ -15,6 +16,15 @@ export default function TodoDetail() {
     };
     fetchDetail();
   }, [id]);
+
+
+  const handleDelete = async () => {
+    let data = await deleteOneTodo(todo._id);
+    history.push('/todos')
+    
+    
+  }
+
   return (
     <Layout>
       <div>
@@ -22,6 +32,7 @@ export default function TodoDetail() {
         <h2>{todo?.location}</h2>
         <img src={todo.imageURL} />
       </div>
+      <button  onClick={handleDelete} className="bg-red-400 hover:bg-red-700 text-white px-10 py-2 rounded-lg mt-5 mb-5 font-bold md:text-sm">Delete</button>
     </Layout>
   );
 }
