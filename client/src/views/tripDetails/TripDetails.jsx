@@ -20,6 +20,7 @@ export default function TodoDetail() {
       <div>
         <h1>{todo?.name}</h1>
         <h2>{todo?.location}</h2>
+        <img src={todo.imageURL} />
       </div>
     </Layout>
   );
