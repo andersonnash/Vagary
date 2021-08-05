@@ -50,10 +50,6 @@ function App() {
       <Route path="/sign-up">
         <SignUp setUser={setUser} user={user} />
       </Route>
-
-      <Route path="/new-todo">
-        <NewTodo setUser={setUser} user={user} />
-      </Route>
     </div>
   );
 }
