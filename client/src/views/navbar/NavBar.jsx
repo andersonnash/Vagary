@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import React from "react";
 import { useState, useEffect } from "react";
 import { FaFileExcel } from "react-icons/fa";
+import { signOut } from "../../views/signOut/SignOut";
 
 const Navbar = () => {
   const [hamburger, setHamburger] = useState(false);
@@ -60,6 +61,7 @@ const Navbar = () => {
               <NavLink to="/">Homepage</NavLink>
               <NavLink to="/sign-in">Sign In</NavLink>
               <NavLink to="/sign-up">Sign Up</NavLink>
+              <NavLink to="/sign-out">Sign Out</NavLink>
             </div>
           </div>
         </div>
