@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import React from "react";
 import { useState, useEffect } from "react";
+import { FaFileExcel } from "react-icons/fa";
 
 const Navbar = () => {
   const [hamburger, setHamburger] = useState(false);
@@ -47,23 +48,23 @@ const Navbar = () => {
             className="nav-items"
             style={{ display: hamburger && visible ? "flex" : "none" }}
           >
+            <NavLink to="/">Homepage</NavLink>
+            <NavLink to="/sign-in">Sign In</NavLink>
+            <NavLink to="/sign-up">Sign Up</NavLink>
+
             <Link to="/">Homepage</Link>
             <Link to="/sign-in">Sign In</Link>
             <Link to="/sign-up">Sign Up</Link>
           </div>
         </div>
       ) : (
-        <div className="desktopClass">
-          <div className="menu">
-            <button>
-              <Link to="/">Homepage</Link>
-            </button>
-            <button>
-              <Link to="/sign-in">Sign In</Link>
-            </button>
-            <button>
-              <Link to="/sign-up">Sign Up</Link>
-            </button>
+        <div className="flex">
+          <div className="desktopClass">
+            <div className="inline-block border border-blue-500 rounded py-1 px-3 bg-blue-500 text-white">
+              <NavLink to="/">Homepage</NavLink>
+              <NavLink to="/sign-in">Sign In</NavLink>
+              <NavLink to="/sign-up">Sign Up</NavLink>
+            </div>
           </div>
         </div>
       )}
