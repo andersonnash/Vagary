@@ -5,24 +5,25 @@ import { useParams, Link, useHistory } from "react-router-dom";
 export default function Post() {
   let { id } = useParams();
   // let history = useHistory();
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState({});
 
   useEffect(() => {
     handleUser();
     // eslint-disable-next-line
   }, []);
 
-  async function handleUser() {
+  async function handleUser(props) {
+    console.log(props);
     let res = await getUser(id);
-    // console.log(res)
-    setUser(res);
+    console.log(res);
+    setUser(res.id);
   }
 
   // const handleDelete = async () => {
   //   await deleteUser(`${id}`);
   //   history.push("/user-homepage");
   // };
-
+  console.log(getUser, "get user");
   return (
     <div>
       <h2>These are {user.username}'s trip details! </h2>
@@ -35,10 +36,10 @@ export default function Post() {
         return (
           <div key={post._id}>
             <h3>
-              <Link to={`/user-homepage/${user._id}`}>{post.title}</Link>
+              <Link to={`/${user._id}`}>{post.title}</Link>
             </h3>
             <img src={post.imageURL} alt={post.title} />
-            <p>{post.content}</p>
+            <p>{post.description}</p>
           </div>
         );
       })}
