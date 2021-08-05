@@ -26,7 +26,7 @@ export default function SignIn(props) {
   };
 
   return (
-    <div>
+    <div className="signin-div">
       <form className="signin-form" onSubmit={handleSubmit}>
         <h3>Sign In</h3>
         <label className="emaillabel">Email</label>
