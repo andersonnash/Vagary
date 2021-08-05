@@ -29,30 +29,31 @@ function App() {
   return (
     <div className="App">
 
-      <Navbar />
       <Route exact path="/">
         <ImgSlide slides={SlideData} />
       </Route>
-      <Route exact path="/sign-in">
-        <SignIn setUser={setUser} user={user}  />
-      </Route> 
-      <Route exact path="/posts:id">
+      <Route path="/user-homepage">
+        <UserHomePage />
+      </Route>
+      <Route path="/sign-in">
+        <SignIn setUser={setUser} user={user} />
+      </Route>
+      <Route exact path="/todos/:id">
         <TripDetails />
       </Route>
       <Route exact path="/todos">
         <AllTodos user={user} />
       </Route>
+      <Route path="/new-todo">
+        <NewTodo />
+      </Route>
       <Route exact path="/sign-up">
         <SignUp setUser={setUser} user={user} />
       </Route>
 
-      
-        <Route path="/new-todo">
-          <NewTodo setUser={setUser} user={user} />
-        </Route>
-      
-
-      
+      <Route path="/new-todo">
+        <NewTodo setUser={setUser} user={user} />
+      </Route>
     </div>
   );
 }
