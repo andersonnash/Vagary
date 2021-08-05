@@ -1,3 +1,4 @@
+// import todo from "../models/todo.js";
 import Todo from "../models/todo.js";
 // import User from "../models/user.js";
 
@@ -26,9 +27,9 @@ export const getTodo = async (req, res) => {
 
 export const createTodo = async (req, res) => {
   try {
-    const trip = new Trip(req.body);
-    await trip.save();
-    res.status(201).json(trip);
+    const todo = new Todo(req.body);
+    await todo.save();
+    res.status(201).json(todo);
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: error.message });

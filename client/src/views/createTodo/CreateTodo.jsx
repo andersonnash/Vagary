@@ -4,7 +4,8 @@ import { useHistory } from "react-router";
 import { createTodo } from "../../services/todo";
 
 
-export default function NewTodo(props) {
+
+const NewTodo = (props) => {
     const [input, setInput] = useState({
         name: "",
         location: "",
@@ -27,13 +28,13 @@ export default function NewTodo(props) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         await createTodo(input);
-        history.push("/todos")
+        history.push("/")
     }
 
     return(
         <Layout user={props.user} setUser={props.setUser}>
             New Todo
-            <form onSubmit={handleSubmit}>
+            <form className="min-h-screen" onSubmit={handleSubmit}>
                 <label>Name</label>
                 <br />
                 <input id="name" value={input.name} onChange={handleChange}/>
@@ -58,9 +59,10 @@ export default function NewTodo(props) {
                 <br /> 
                 <input id="imageURL" value={input.imageURL} onChange={handleChange}/>
                 <br />
-                <button>Submit</button>
+                <button type="submit">Submit</button>
             </form>
 
         </Layout>
     )
-}
+};
+export default NewTodo;
