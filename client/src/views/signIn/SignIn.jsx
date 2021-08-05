@@ -26,7 +26,9 @@ export default function SignIn(props) {
   return (
     <div className="signin-div">
       <form className="signin-form" onSubmit={handleSubmit}>
-        <h3>Sign In</h3>
+
+          <h3>Sign In</h3>
+
         <label className="emaillabel">Email</label>
         <input
           id="email"
@@ -41,8 +43,8 @@ export default function SignIn(props) {
           id="password"
           type="password"
           value={input.password}
-          onChange={handleInput}
-        />
+          onChange={handleInput} 
+         />
         <br />
 
         <button className="signin-button">Sign In</button>
