@@ -12,7 +12,7 @@ export default function SignIn(props) {
     e.preventDefault();
     const user = await signIn(input);
     setUser(user);
-    history.push("/");
+    history.push("/user-homepage");
   };
 
   const handleInput = (e) => {
@@ -49,5 +49,4 @@ export default function SignIn(props) {
       </form>
     </div>
   );
-  }
-
+}
