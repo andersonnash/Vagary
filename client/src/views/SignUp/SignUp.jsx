@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { signUp } from "../../services/user";
 import Layout from "../../components/Layout/Layout";
+import "./SignUp.css";
 
 export default function SignUp() {
   const [input, setInput] = useState({ username: "", email: "", password: "" });
+
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -21,35 +24,35 @@ export default function SignUp() {
     };
     return (
         <Layout>
-            <div>
-                SignUp
-                <form onSubmit={handleSubmit}>
-                    <label>Username</label>
+            <div className="signup-div">
+                
+                <form className ="signup-form" onSubmit={handleSubmit}>
+                    <h3> Sign Up</h3>
+                    <label className="username">Username</label>
                     <input
                         id="username"
                         type="text"
                         value={input.username}
                         onChange={handleInput}
                     />
-                    <label>Email</label>
+                    <label className="emaillabel">Email</label>
                     <input
                         id="email"
                         type="email"
                         value={input.email}
                         onChange={handleInput}
                     />
-                    <label>Password</label>
+                    <label className="passwordlabel">Password</label>
                     <input
                         id="password"
                         type="password"
                         value={input.password}
                         onChange={handleInput}
                     />
-                    <button>Sign Up</button>
+                    <button className="signup-button">Sign Up</button>
                 </form>
             </div>
         </Layout>
     );
 
-}
-
+  

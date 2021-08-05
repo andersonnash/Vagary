@@ -1,12 +1,9 @@
-
-import {useState} from "react";
-import {signIn} from "../../services/user"
-
+import { useState } from "react";
+import { signIn } from "../../services/user";
 import { useHistory } from "react-router-dom";
 import "./SignIn.css";
 
 export default function SignIn(props) {
-
   const [input, setInput] = useState({ email: "", username: "", password: "" });
   const { setUser } = props;
   const history = useHistory();
@@ -27,7 +24,7 @@ export default function SignIn(props) {
   };
 
   return (
-    <div>
+    <div className="signin-div">
       <form className="signin-form" onSubmit={handleSubmit}>
 
           <h3>Sign In</h3>
@@ -46,8 +43,8 @@ export default function SignIn(props) {
           id="password"
           type="password"
           value={input.password}
-          onChange={handleInput}
-        />
+          onChange={handleInput} 
+         />
         <br />
 
         <button className="signin-button">Sign In</button>
