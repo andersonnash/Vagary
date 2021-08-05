@@ -26,3 +26,21 @@ export const getOneTodo = async (id) => {
     throw e;
   }
 };
+
+export const deleteOneTodo = async (id) => {
+  try {
+    const res = await api.delete(`todos/${id}`);
+    return res.data;
+  } catch (e) {
+    throw e;
+  }
+};
+
+export const updateTodo = async (id) => {
+  try {
+    const res = await api.put(`/todos/${id}`);
+    return res.data;
+  } catch (e) {
+    throw e;
+  }
+};
