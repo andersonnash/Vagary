@@ -5,8 +5,8 @@ export const signUp = async (credentials) => {
   try {
     const res = await api.post("/sign-up", credentials);
     localStorage.setItem("token", res.data.token);
-    let user = jwtDecode(res.data.token);
-    return user;
+    // let user = jwtDecode(res.data.token);
+    return res.data;
   } catch (e) {
     throw e;
   }
@@ -23,12 +23,13 @@ export const signIn = async (credentials) => {
 };
 
 export const verify = async () => {
-  const token = localStorage.getItem("token");
-  if (token) {
+  try {
+    const token = localStorage.getItem("token");
     const res = await api.get("/verify");
     console.log(res.data);
     return res.data;
-  } else {
+  } catch (error) {
+    console.log(error);
     return false;
   }
 };
