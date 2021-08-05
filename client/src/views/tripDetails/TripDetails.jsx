@@ -4,6 +4,19 @@ import { useParams } from "react-router-dom";
 import { getOneTodo } from "../../services/todo";
 import Layout from "../../components/Layout/Layout";
 
+// export default function UserDetails() {
+//   const [user, setUser] = useState({})
+//   const { id } = useParams()
+
+//   useEffect(() => {
+//     const fetchUser = async () => {
+//       let data = await getUser(id)
+//       setUser(data)
+//     }
+//     fetchUser()
+//   }, [id])
+// }
+
 export default function TodoDetail() {
   const [todo, setTodo] = useState({});
   const { id } = useParams();
@@ -18,6 +31,7 @@ export default function TodoDetail() {
   return (
     <Layout>
       <div>
+        {/* <h1>{user?.username}</h1> */}
         <h1>{todo?.name}</h1>
         <h2>{todo?.location}</h2>
         <img src={todo.imageURL} />
