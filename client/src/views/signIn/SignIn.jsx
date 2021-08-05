@@ -5,7 +5,7 @@ import "./SignIn.css";
 
 export default function SignIn(props) {
     const [input, setInput] = useState({email: "", username: "", password: ""})
-    const { setUser} = props
+    const { setUser } = props
     const history = useHistory();
 
 const handleSubmit = async(e) => {
