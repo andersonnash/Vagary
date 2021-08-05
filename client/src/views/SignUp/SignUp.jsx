@@ -5,6 +5,7 @@ import Layout from "../../components/Layout/Layout";
 export default function SignUp() {
   const [input, setInput] = useState({ username: "", email: "", password: "" });
 
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const user = await signUp(input);
