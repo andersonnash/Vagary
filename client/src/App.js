@@ -27,6 +27,7 @@ function App() {
 
   return (
     <div className="App">
+
       <Navbar />
       <Route exact path="/">
         <ImgSlide slides={SlideData}/>
@@ -40,12 +41,17 @@ function App() {
       <Route exact path="/todos">
         <AllTodos user={user} />
       </Route>
-      <Route exact path="/new-todo">
-        <NewTodo />
-      </Route>
       <Route exact path="/sign-up">
         <SignUp setUser={setUser} user={user} />
       </Route>
+
+      
+        <Route path="/new-todo">
+          <NewTodo setUser={setUser} user={user} />
+        </Route>
+      
+
+      
     </div>
   );
 }
