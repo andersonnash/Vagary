@@ -77,6 +77,76 @@ const insertData = async () => {
       location: "Colosseum",
       flightInfo:"Monday"
     },
+
+    {
+      name: 'Italy',
+      date: '08/10/2021',
+      description: 'The Colosseum (/ˌkɒləˈsiːəm/ KOL-Ə-SEE-Əm; Italian: Colosseo [Kolosˈsɛːo]) Is An Oval Amphitheatre In The Centre Of The City Of Rome, Italy, Just East Of The Roman Forum.',
+      imageURL: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1286&q=80',
+      user_id: user4,
+      location: "Colosseum",
+      flightInfo:"Monday"
+    },
+
+    {
+      name: 'Italy',
+      date: '08/10/2021',
+      description: 'The Colosseum (/ˌkɒləˈsiːəm/ KOL-Ə-SEE-Əm; Italian: Colosseo [Kolosˈsɛːo]) Is An Oval Amphitheatre In The Centre Of The City Of Rome, Italy, Just East Of The Roman Forum.',
+      imageURL: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1286&q=80',
+      user_id: user4,
+      location: "Colosseum",
+      flightInfo:"Monday"
+    },
+
+    {
+      name: 'Italy',
+      date: '08/10/2021',
+      description: 'The Colosseum (/ˌkɒləˈsiːəm/ KOL-Ə-SEE-Əm; Italian: Colosseo [Kolosˈsɛːo]) Is An Oval Amphitheatre In The Centre Of The City Of Rome, Italy, Just East Of The Roman Forum.',
+      imageURL: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1286&q=80',
+      user_id: user4,
+      location: "Colosseum",
+      flightInfo:"Monday"
+    },
+
+    {
+      name: 'Italy',
+      date: '08/10/2021',
+      description: 'The Colosseum (/ˌkɒləˈsiːəm/ KOL-Ə-SEE-Əm; Italian: Colosseo [Kolosˈsɛːo]) Is An Oval Amphitheatre In The Centre Of The City Of Rome, Italy, Just East Of The Roman Forum.',
+      imageURL: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1286&q=80',
+      user_id: user4,
+      location: "Colosseum",
+      flightInfo:"Monday"
+    },
+
+    {
+      name: 'Italy',
+      date: '08/10/2021',
+      description: 'The Colosseum (/ˌkɒləˈsiːəm/ KOL-Ə-SEE-Əm; Italian: Colosseo [Kolosˈsɛːo]) Is An Oval Amphitheatre In The Centre Of The City Of Rome, Italy, Just East Of The Roman Forum.',
+      imageURL: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1286&q=80',
+      user_id: user4,
+      location: "Colosseum",
+      flightInfo:"Monday"
+    },
+
+    {
+      name: 'Italy',
+      date: '08/10/2021',
+      description: 'The Colosseum (/ˌkɒləˈsiːəm/ KOL-Ə-SEE-Əm; Italian: Colosseo [Kolosˈsɛːo]) Is An Oval Amphitheatre In The Centre Of The City Of Rome, Italy, Just East Of The Roman Forum.',
+      imageURL: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1286&q=80',
+      user_id: user4,
+      location: "Colosseum",
+      flightInfo:"Monday"
+    },
+
+    {
+      name: 'Italy',
+      date: '08/10/2021',
+      description: 'The Colosseum (/ˌkɒləˈsiːəm/ KOL-Ə-SEE-Əm; Italian: Colosseo [Kolosˈsɛːo]) Is An Oval Amphitheatre In The Centre Of The City Of Rome, Italy, Just East Of The Roman Forum.',
+      imageURL: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1286&q=80',
+      user_id: user4,
+      location: "Colosseum",
+      flightInfo:"Monday"
+    },
   ];
 
   await Todo.insertMany(todos);

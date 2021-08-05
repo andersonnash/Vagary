@@ -53,17 +53,14 @@ export const updateTodo = async (req, res) => {
 
 export const deleteTodo = async (req, res) => {
   try {
-    const todo = await Post.findByIdAndDelete(req.params.id);
-    await User.findByIdAndUpdate(
-      { _id: post.user_id },
-      { $pull: { posts: post._id } }
-    );
-    if (todo) {
-      return res.status(200).send("Todo Deleted");
-    } else {
-      return res.status(404).send("Todo Not Found");
+    const { id } = req.params;
+    const deleted = await Todo.findByIdAndDelete(id);
+    if (deleted) {
+      return res.status(200).send('Successfully Deleted');
     }
-  } catch (err) {
-    return res.status(500).json({ error: err.message });
+    throw new Error('Trip not found');
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json({ error: error.message });
   }
 };
