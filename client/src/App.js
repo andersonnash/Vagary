@@ -38,7 +38,7 @@ function App() {
       <Route path="/sign-in">
         <SignIn setUser={setUser} user={user} />
       </Route>
-      <Route path="/trip-details">
+      <Route path="/todos/:id">
         <TripDetails />
       </Route>
       <Route exact path="/todos">
