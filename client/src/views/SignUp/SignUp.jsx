@@ -5,6 +5,7 @@ import Layout from "../../components/Layout/Layout";
 export default function SignUp() {
   const [input, setInput] = useState({ username: "", email: "", password: "" });
 
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const user = await signUp(input);
@@ -22,8 +23,9 @@ export default function SignUp() {
     return (
         <Layout>
             <div>
-                SignUp
+                
                 <form onSubmit={handleSubmit}>
+                    <h3> Sign Up</h3>
                     <label>Username</label>
                     <input
                         id="username"
@@ -52,3 +54,4 @@ export default function SignUp() {
     );
 
 }
+

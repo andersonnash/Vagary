@@ -28,7 +28,6 @@ function App() {
 
   return (
     <div className="App">
-
       <Navbar />
       <Route exact path="/">
         <ImgSlide slides={SlideData} />
@@ -39,7 +38,7 @@ function App() {
       <Route path="/sign-in">
         <SignIn setUser={setUser} user={user} />
       </Route>
-      <Route path="/trip-details">
+      <Route exact path="/todos/:id">
         <TripDetails />
       </Route>
       <Route exact path="/todos">
@@ -48,17 +47,12 @@ function App() {
       <Route path="/new-todo">
         <NewTodo />
       </Route>
-      <Route path="/sign-up">
+      <Route exact path="/sign-up">
         <SignUp setUser={setUser} user={user} />
       </Route>
-
-      
-        <Route path="/new-todo">
-          <NewTodo setUser={setUser} user={user} />
-        </Route>
-      
-
-      
+      <Route path="/new-todo">
+        <NewTodo setUser={setUser} user={user} />
+      </Route>
     </div>
   );
 }
