@@ -51,10 +51,6 @@ const Navbar = () => {
             <NavLink to="/">Homepage</NavLink>
             <NavLink to="/sign-in">Sign In</NavLink>
             <NavLink to="/sign-up">Sign Up</NavLink>
-
-            <Link to="/">Homepage</Link>
-            <Link to="/sign-in">Sign In</Link>
-            <Link to="/sign-up">Sign Up</Link>
           </div>
         </div>
       ) : (

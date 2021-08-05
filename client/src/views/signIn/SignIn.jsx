@@ -43,8 +43,8 @@ export default function SignIn(props) {
           id="password"
           type="password"
           value={input.password}
-          onChange={handleInput}
-        />
+          onChange={handleInput} 
+         />
         <br />
 
         <button className="signin-button">Sign In</button>
