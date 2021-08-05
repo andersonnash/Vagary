@@ -28,7 +28,7 @@ const NewTodo = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         await createTodo(input);
-        history.push("/")
+        history.push("/todos")
     }
 
     return(

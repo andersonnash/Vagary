@@ -20,11 +20,11 @@ export default function Home(props) {
     return (
         <Layout user={props.user} setUser={props.setUser}>
             {todos.map((todo) => (
-                <div className="lg:grid lg:grid-ros-3 md:grid md:grid-cols-3">
-                    <div className='p-10'>
+                <div className="lg:grid lg:grid-ros-3 md:grid md:grid-cols-3 pt-32">
+                    <div className='p-8 '>
                         <div className="rounded overflow-hidden shadow-lg  bg-gray-800 relative transition duration-500 hover:opacity-70 transform ease-in-out hover:-translate-y-1 hover:scale-110">
                             <div className="text-white font-black capitalize">
-                                <Link to={`/todos/${id}`}> <img className=" w-full h-32 object-cover" src={todo.imageURL} alt={todo.name} />
+                                <Link to={`/todos/${todo._id}`}> <img className=" w-full h-32 object-cover" src={todo.imageURL} alt={todo.name} />
                                     <div className="m-2">
                                         {todo.name}
                                     </div>
