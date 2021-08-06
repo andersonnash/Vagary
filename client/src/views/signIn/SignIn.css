@@ -1,5 +1,5 @@
 .signin-form {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     justify-content: center;
     align-self: center;
@@ -11,9 +11,6 @@
 
 @media (prefers-reduced-motion: no-preference) {
 
-    body {
-        background-color: #f4f0bb;
-    }
     nav {
         /* border-style: dotted; */
         margin: 0;
