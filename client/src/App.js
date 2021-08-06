@@ -52,6 +52,7 @@ function App() {
       <Route path="/new-todo">
         <NewTodo setUser={setUser} user={user} />
       </Route>
+      
     </div>
   );
 }

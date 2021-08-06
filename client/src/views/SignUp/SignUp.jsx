@@ -23,7 +23,7 @@ export default function SignUp() {
         }));
     };
     return (
-        <Layout>
+        
             <div className="signup-div">
                 
                 <form className ="signup-form" onSubmit={handleSubmit}>
@@ -52,7 +52,7 @@ export default function SignUp() {
                     <button className="signup-button">Sign Up</button>
                 </form>
             </div>
-        </Layout>
+        
     );
     }
   
