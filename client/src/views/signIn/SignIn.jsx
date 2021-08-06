@@ -29,8 +29,9 @@ export default function SignIn(props) {
 
           <h1>Sign In</h1>
 
-        <label className="emaillabel">Email</label>
+        {/* <label className="emaillabel">Email</label> */}
         <input
+        placeholder="Email"
           id="email"
           type="email"
           value={input.email}
@@ -38,8 +39,9 @@ export default function SignIn(props) {
         />
         <br />
 
-        <label className="passwordlabel">Password</label>
+        {/* <label className="passwordlabel">Password</label> */}
         <input
+        placeholder="Password"
           id="password"
           type="password"
           value={input.password}

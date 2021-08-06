@@ -9,11 +9,11 @@
         margin-bottom: 30px;
         height: 70px;
     }
-    h3{
-        border: 3px solid black;
+    h1{
+        border: none;
         position: relative ;
         bottom: 40px;
-        font-size: 1.39em;
+        font-size: 30px;
         font-weight: bold;
         color: coral;
         width: 150px;
@@ -43,14 +43,15 @@
     
     .signup-div {
         /* margin: 50px auto 50px; */
-        border: 5px solid black;
+        border: none;
         display: flex;
-        margin-top: 81px;
+        margin-top: 172px;
+        margin-bottom: 100px;
         
     }
     
     .signup-form {
-        background-color: rgb(56, 78, 204);
+        background-color: #05648A;
         display: flex;
         flex-direction: column;
         margin: 30px;
@@ -64,7 +65,9 @@
     }
     
     .signup-button {
-        border: 2px solid navy; 
+        border: none; 
+        border-radius: 10px;
+       background: linear-gradient(90deg, rgba(255,127,80,1) 20%, rgba(255,212,150,1) 80%);
         width: 150px;
         display: flex;
         justify-content: center;
