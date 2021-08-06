@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { verify } from "../../services/user"
 // import { getUser } from "../../services/user";
 import { useParams, useHistory } from "react-router-dom";
 import { getOneTodo, deleteOneTodo, updateTodo } from "../../services/todo";
@@ -23,6 +24,7 @@ export default function TodoDetail(props) {
   const [toggle, setToggle] = useState(false);
   const { id } = useParams();
   const history = useHistory();
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const fetchDetail = async () => {
@@ -37,6 +39,16 @@ export default function TodoDetail(props) {
     history.push("/todos");
   };
 
+ 
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verify();
+      user ? setUser(user) : setUser(null);
+    };
+    fetchUser();
+  }, []);
+
   return (
     <>
       <div className=" flex flex-col justify-center text-2xl">
@@ -48,18 +60,23 @@ export default function TodoDetail(props) {
         <p>{todo?.flightInfo}</p>
         <p>{todo?.date}</p>
       </div>
-
+      
+{user && (
       <button
         onClick={handleDelete}
         className="bg-red-400 hover:bg-red-700 text-white px-10 py-2 rounded-lg mt-5 mb-5 font-bold md:text-sm"
       >
         Delete
       </button>
+      )}
+
+      {user && (
       <UpdateTrip
         user={props.user}
         setUser={props.setUser}
         setToggle={setToggle}
       />
+      )}
     </>
   );
 }
