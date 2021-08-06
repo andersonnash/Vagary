@@ -7,7 +7,7 @@ const Layout = (props) => {
     <div>
       <Navbar user={props.user} setUser={props.setUser} />
       <div>{props.children}</div>
-      <Footer />
+      <Footer  />
     </div>
   );
 };

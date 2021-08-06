@@ -51,10 +51,11 @@ function App() {
         <Route exact path="/sign-up">
           <SignUp setUser={setUser} user={user} />
         </Route>
-
+  {user && (
         <Route path="/new-todo">
           <NewTodo setUser={setUser} user={user} />
         </Route>
+        )}
       </Layout>
     </div>
   );
