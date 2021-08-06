@@ -29,30 +29,30 @@ function App() {
 
   return (
     <div className="App">
-      <Layout setUser={setUser} user={user} />
-      <Route exact path="/">
-        <ImgSlide slides={SlideData} />
-      </Route>
-      <Route path="/user-homepage">
-        <UserHomePage />
-      </Route>
-      <Route path="/sign-in">
-        <SignIn setUser={setUser} user={user} />
-      </Route>
-      <Route exact path="/todos/:id">
-        <TripDetails />
-      </Route>
-      <Route exact path="/todos">
-        <AllTodos user={user} />
-      </Route>
-      <Route exact path="/sign-up">
-        <SignUp setUser={setUser} user={user} />
-      </Route>
+      <Layout setUser={setUser} user={user}>
+        <Route exact path="/">
+          <ImgSlide slides={SlideData} />
+        </Route>
+        <Route path="/user-homepage">
+          <UserHomePage />
+        </Route>
+        <Route path="/sign-in">
+          <SignIn setUser={setUser} user={user} />
+        </Route>
+        <Route exact path="/todos/:id">
+          <TripDetails />
+        </Route>
+        <Route exact path="/todos">
+          <AllTodos user={user} />
+        </Route>
+        <Route exact path="/sign-up">
+          <SignUp setUser={setUser} user={user} />
+        </Route>
 
-      <Route path="/new-todo">
-        <NewTodo setUser={setUser} user={user} />
-      </Route>
-      
+        <Route path="/new-todo">
+          <NewTodo setUser={setUser} user={user} />
+        </Route>
+      </Layout>
     </div>
   );
 }
