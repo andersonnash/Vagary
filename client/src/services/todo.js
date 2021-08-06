@@ -36,9 +36,9 @@ export const deleteOneTodo = async (id) => {
   }
 };
 
-export const updateTodo = async (id) => {
+export const updateTodo = async (id, input) => {
   try {
-    const res = await api.put(`/todos/${id}`);
+    const res = await api.put(`/todos/${id}`,input);
     return res.data;
   } catch (e) {
     throw e;
