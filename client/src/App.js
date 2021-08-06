@@ -3,7 +3,7 @@ import "./views/navbar/navbar.css";
 import "./views/tripDetails/tripDetails.css";
 // import "./views/header/header.css";
 import ImgSlide from "./views/home/ImgSlide";
-import { SlideData } from "./views/home/SlideData";
+// import { SlideData } from "./views/home/SlideData";
 
 import { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
@@ -32,11 +32,13 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <Layout setUser={setUser} user={user}>
         {/* <Header /> */}
         <Route exact path="/">
-          <ImgSlide slides={SlideData} />
         </Route>
+        <ImgSlide />
+      </Route>
         <Route path="/user-homepage">
           <UserHomePage />
         </Route>
