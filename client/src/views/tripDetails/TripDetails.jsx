@@ -17,23 +17,25 @@ export default function TodoDetail() {
     fetchDetail();
   }, [id]);
 
-
   const handleDelete = async () => {
     let data = await deleteOneTodo(todo._id);
-    history.push('/todos')
-    
-    
-  }
+    history.push("/todos");
+  };
 
   return (
-    <Layout>
+    <>
       <div>
         <h1>{todo?.name}</h1>
         <h2>{todo?.location}</h2>
         <img src={todo.imageURL} />
       </div>
-      <button  onClick={handleDelete} className="bg-red-400 hover:bg-red-700 text-white px-10 py-2 rounded-lg mt-5 mb-5 font-bold md:text-sm">Delete</button>
-    </Layout>
+      <button
+        onClick={handleDelete}
+        className="bg-red-400 hover:bg-red-700 text-white px-10 py-2 rounded-lg mt-5 mb-5 font-bold md:text-sm"
+      >
+        Delete
+      </button>
+    </>
   );
 }
 

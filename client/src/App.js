@@ -1,5 +1,6 @@
 import "./App.css";
 import "./views/navbar/navbar.css";
+// import "./views/header/header.css";
 import ImgSlide from "./views/home/ImgSlide";
 import { SlideData } from "./views/home/SlideData";
 
@@ -15,6 +16,7 @@ import Layout from "./components/Layout/Layout";
 import SignUp from "./views/SignUp/SignUp";
 import TripDetails from "./views/tripDetails/TripDetails";
 import NewTodo from "./views/createTodo/CreateTodo";
+import Header from "./views/header/Header";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -30,6 +32,7 @@ function App() {
   return (
     <div className="App">
       <Layout setUser={setUser} user={user}>
+        {/* <Header /> */}
         <Route exact path="/">
           <ImgSlide slides={SlideData} />
         </Route>
