@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Spectral&display=swap");
+
+a,
+button {
+  font-family: Karla;
+  /* font-size: 25px; */
+}

@@ -1,4 +1,5 @@
 import "./App.css";
+import "./views/navbar/navbar.css";
 import ImgSlide from "./views/home/ImgSlide";
 import { SlideData } from "./views/home/SlideData";
 
