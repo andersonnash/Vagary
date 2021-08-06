@@ -1,5 +1,6 @@
 import "./App.css";
 import "./views/navbar/navbar.css";
+import "./views/tripDetails/tripDetails.css";
 // import "./views/header/header.css";
 import ImgSlide from "./views/home/ImgSlide";
 import { SlideData } from "./views/home/SlideData";
