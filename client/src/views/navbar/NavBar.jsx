@@ -54,7 +54,7 @@ const Navbar = (props) => {
       setUser(await verify());
     };
     verifyUser();
-    props.setUser(null);
+    // props.setUser(null);
   }, [toggle]);
 
   return (
