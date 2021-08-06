@@ -39,11 +39,11 @@ export default function TodoDetail(props) {
 
   return (
     <>
-      <div>
+      <div className=" flex flex-col justify-center text-2xl">
         {/* <h1>{user?.username}</h1> */}
         <h1>{todo?.name}</h1>
         <h2>{todo?.location}</h2>
-        <img className="flex justify-center" src={todo.imageURL} />
+        <img src={todo.imageURL} />
         <p>{todo?.description}</p>
         <p>{todo?.flightInfo}</p>
         <p>{todo?.date}</p>

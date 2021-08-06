@@ -46,7 +46,10 @@ const Navbar = (props) => {
 
   return (
     <>
-      <nav>
+      <nav class="flex justify-end flex-wrap content-center pr-10 text-2xl">
+        <Link to="/homepage">
+          <h2 class="headingLogo justify-start">Vagary</h2>
+        </Link>
         {isMobile ? (
           <div className="mobileClass">
             <img
@@ -62,15 +65,18 @@ const Navbar = (props) => {
               <NavLink to="/">Homepage</NavLink>
               <NavLink to="/sign-in">Sign In</NavLink>
               <NavLink to="/sign-up">Sign Up</NavLink>
+              <NavLink to="/sign-out">Sign Out</NavLink>
             </div>
           </div>
         ) : (
-          <div className="flex justify-end space-x-10  text-black mr-8 font-serif  text-2xl pt-8">
-            <NavLink to="/">Homepage</NavLink>
-            <NavLink to="/sign-in">Sign In</NavLink>
-            <NavLink to="/sign-up">Sign Up</NavLink>
-            <NavLink to="/todos"> All Trips</NavLink>
-            <button onClick={handleSignOut}>Sign Out</button>
+          <div className="desktop-container  ">
+            <div class="space-x-10">
+              <NavLink to="/">Homepage</NavLink>
+              <NavLink to="/sign-in">Sign In</NavLink>
+              <NavLink to="/sign-up">Sign Up</NavLink>
+              <NavLink to="/todos"> All Trips</NavLink>
+              <button onClick={handleSignOut}>Sign Out</button>
+            </div>
           </div>
         )}
       </nav>
