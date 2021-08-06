@@ -5,6 +5,21 @@ import { getOneTodo, deleteOneTodo, updateTodo } from "../../services/todo";
 import Layout from "../../components/Layout/Layout";
 import UpdateTrip from "../editTodos/editTodos";
 
+// export default function UserDetails() {
+//   const [user, setUser] = useState({})
+//   const { id } = useParams()
+
+//   useEffect(() => {
+//     const fetchUser = async () => {
+//       let data = await getUser(id)
+//       setUser(data)
+//     }
+//     fetchUser()
+//   }, [id])
+// }
+
+export default function TodoDetail() {
+=======
 export default function TodoDetail(props) {
   const [todo, setTodo] = useState({});
   const [toggle, setToggle] = useState(false)
@@ -29,6 +44,7 @@ export default function TodoDetail(props) {
   return (
     <>
       <div>
+        {/* <h1>{user?.username}</h1> */}
         <h1>{todo?.name}</h1>
         <h2>{todo?.location}</h2>
         <img src={todo.imageURL} />
@@ -36,7 +52,6 @@ export default function TodoDetail(props) {
 
       <button onClick={handleDelete} className="bg-red-400 hover:bg-red-700 text-white px-10 py-2 rounded-lg mt-5 mb-5 font-bold md:text-sm">Delete</button>
       <UpdateTrip user={props.user} setUser={props.setUser} setToggle={setToggle} />
-
-    </Layout>
+</>
   );
 }
