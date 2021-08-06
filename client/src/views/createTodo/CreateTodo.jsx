@@ -32,7 +32,8 @@ const NewTodo = (props) => {
     }
 
     return (
-        <Layout user={props.user} setUser={props.setUser}>
+        <div
+            user={props.user} setUser={props.setUser}>
             <div className=" min-h-screen shadow-2xl px-8 pb-10 mb-4 font-serif pt-40  ">
                 <h3 className=" flex  lg:flex lg:justify-center lg:items-center justify-center font-bold uppercase text-black text-2xl italic font-mono">Add New Trip</h3>
                 <div>
@@ -72,7 +73,7 @@ const NewTodo = (props) => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </div>
     )
 };
 export default NewTodo;
