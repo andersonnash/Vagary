@@ -38,16 +38,13 @@ export const createTodo = async (req, res) => {
 
 export const updateTodo = async (req, res) => {
   try {
-    const todo = await Todo.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-    });
-    if (todo) {
-      return res.status(201).send("Todo Updated");
-    } else {
-      return res.status(404).send("Todo Not Found");
-    }
-  } catch (err) {
-    return res.status(500).json({ error: err.message });
+    const { id } = req.params;
+    console.log(req.body)
+    const todo = await Todo.findByIdAndUpdate(id, req.body);
+    console.log(todo)
+    res.json(todo);
+  } catch (error) {
+    console.log(error.message);
   }
 };
 
