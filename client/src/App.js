@@ -35,10 +35,9 @@ function App() {
       <Navbar />
       <Layout setUser={setUser} user={user}>
         {/* <Header /> */}
-        <Route exact path="/">
-        </Route>
+        <Route exact path="/"></Route>
         <ImgSlide />
-      </Route>
+        {/* </Route> */}
         <Route path="/user-homepage">
           <UserHomePage />
         </Route>
@@ -54,10 +53,10 @@ function App() {
         <Route exact path="/sign-up">
           <SignUp setUser={setUser} user={user} />
         </Route>
-  {user && (
-        <Route path="/new-todo">
-          <NewTodo setUser={setUser} user={user} />
-        </Route>
+        {user && (
+          <Route path="/new-todo">
+            <NewTodo setUser={setUser} user={user} />
+          </Route>
         )}
       </Layout>
     </div>
