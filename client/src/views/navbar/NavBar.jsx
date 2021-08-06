@@ -1,4 +1,4 @@
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink, useHistory, Link } from "react-router-dom";
 import React from "react";
 import { useState, useEffect } from "react";
 import { FaFileExcel } from "react-icons/fa";
@@ -45,36 +45,36 @@ const Navbar = (props) => {
   };
 
   return (
-    <nav>
-      {isMobile ? (
-        <div className="mobileClass">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
-            className="bars"
-            alt="hamburger"
-            onClick={handleClick}
-          />
-          <div
-            className="nav-items"
-            style={{ display: hamburger && visible ? "flex" : "none" }}
-          >
-            <NavLink to="/">Homepage</NavLink>
-            <NavLink to="/sign-in">Sign In</NavLink>
-            <NavLink to="/sign-up">Sign Up</NavLink>
+    <>
+      <nav>
+        {isMobile ? (
+          <div className="mobileClass">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
+              className="bars"
+              alt="hamburger"
+              onClick={handleClick}
+            />
+            <div
+              className="nav-items"
+              style={{ display: hamburger && visible ? "flex" : "none" }}
+            >
+              <NavLink to="/">Homepage</NavLink>
+              <NavLink to="/sign-in">Sign In</NavLink>
+              <NavLink to="/sign-up">Sign Up</NavLink>
+            </div>
           </div>
-        </div>
-      ) : (
-        <div className="desktop-nav">
+        ) : (
           <div className="flex justify-end space-x-10  text-black mr-8 font-serif  text-2xl pt-8">
-            <img className="desktop-logo" src="https://imgur.com/vFtd8Td" />
             <NavLink to="/">Homepage</NavLink>
             <NavLink to="/sign-in">Sign In</NavLink>
             <NavLink to="/sign-up">Sign Up</NavLink>
+            <NavLink to="/todos"> All Trips</NavLink>
             <button onClick={handleSignOut}>Sign Out</button>
           </div>
-        </div>
-      )}
-    </nav>
+        )}
+      </nav>
+    </>
   );
 };
 export default Navbar;
