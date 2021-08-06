@@ -1,8 +1,9 @@
 import "./App.css";
 import "./views/navbar/navbar.css";
+import "./views/tripDetails/tripDetails.css";
 // import "./views/header/header.css";
 import ImgSlide from "./views/home/ImgSlide";
-import { SlideData } from "./views/home/SlideData";
+// import { SlideData } from "./views/home/SlideData";
 
 import { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
@@ -31,11 +32,12 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <Layout setUser={setUser} user={user}>
         {/* <Header /> */}
-        <Route exact path="/">
-          <ImgSlide slides={SlideData} />
-        </Route>
+        <Route exact path="/"></Route>
+        <ImgSlide />
+        {/* </Route> */}
         <Route path="/user-homepage">
           <UserHomePage />
         </Route>
@@ -51,10 +53,11 @@ function App() {
         <Route exact path="/sign-up">
           <SignUp setUser={setUser} user={user} />
         </Route>
-
-        <Route path="/new-todo">
-          <NewTodo setUser={setUser} user={user} />
-        </Route>
+        {user && (
+          <Route path="/new-todo">
+            <NewTodo setUser={setUser} user={user} />
+          </Route>
+        )}
       </Layout>
     </div>
   );

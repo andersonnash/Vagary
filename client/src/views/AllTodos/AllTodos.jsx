@@ -19,11 +19,11 @@ export default function Home(props) {
 
     return (
        
-        <Layout  
+        <div
         user={props.user} setUser={props.setUser}>
             <div  className=' min-h-screen lg:grid lg:grid-cols-3 md:grid md:grid-cols-3 hover:b '>
             {todos.map((todo) => (
-                <div className="p-10 overflow-hidden">
+                <div className="p-10 pt-48 overflow-hidden">
                     <div className="rounded overflow-hidden shadow-lg  bg-gray-700 relative  transition duration-500 hover:opacity-70 transform ease-in-out hover:-translate-y-1 hover:scale-110">
                         <div >
                             <div className="text-white font-black capitalize">
@@ -41,6 +41,6 @@ export default function Home(props) {
                 </div>
             ))}
             </div>
-        </Layout>
+        </div>
     );
 }
