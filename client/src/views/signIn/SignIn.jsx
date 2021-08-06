@@ -24,11 +24,14 @@ export default function SignIn(props) {
   };
 
   return (
-    <div>
+    <div className="signin-div">
       <form className="signin-form" onSubmit={handleSubmit}>
-        <h3>Sign In</h3>
-        <label className="emaillabel">Email</label>
+
+          <h1>Sign In</h1>
+
+        {/* <label className="emaillabel">Email</label> */}
         <input
+        placeholder="Email"
           id="email"
           type="email"
           value={input.email}
@@ -36,13 +39,14 @@ export default function SignIn(props) {
         />
         <br />
 
-        <label className="passwordlabel">Password</label>
+        {/* <label className="passwordlabel">Password</label> */}
         <input
+        placeholder="Password"
           id="password"
           type="password"
           value={input.password}
-          onChange={handleInput}
-        />
+          onChange={handleInput} 
+         />
         <br />
 
         <button className="signin-button">Sign In</button>

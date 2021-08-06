@@ -12,7 +12,7 @@
     /* border-style: dotted; */
     margin-bottom: 30px;
     height: 70px;
-}
+  }
   .mobileClass {
     /* border-style: dotted; */
     padding-bottom: 70px;
@@ -21,40 +21,36 @@
     background-color: coral;
   }
 
- .bars {
-   width: 35px;
-   padding: 5px 5px 5px 5px;
-   /* border-style: dotted; */
-   background-color: burlywood;
-  float: right;
-  margin-top: 15px;
-  position: relative;
-  right: 10px;
-   
- }
+  .bars {
+    width: 35px;
+    padding: 5px 5px 5px 5px;
+    /* border-style: dotted; */
+    background-color: burlywood;
+    float: right;
+    margin-top: 15px;
+    position: relative;
+    right: 10px;
+  }
 
-
- .nav-items {
-   border-style: dotted;
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   margin: 0px 100px 100px 100px;
+  .nav-items {
+    border-style: dotted;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 100px 100px 100px;
     top: 110px;
-   
- }
-
-
-
- }
+  }
+}
 .slider {
   position: relative;
+  margin-top: 150px;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 240px;
   border-style: dashed;
+  /* animation: slider 2s ease-in-out infinite; */
 }
 
 .image {
@@ -85,4 +81,53 @@
   z-index: 10;
   cursor: pointer;
   user-select: none;
+}
+
+SlideData {
+  overflow: hidden;
+  height: 785px;
+}
+
+SlideData {
+  width: 500%;
+  position: relative;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+
+SlideData figure img {
+  width: 20%;
+  float: left;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
 }
