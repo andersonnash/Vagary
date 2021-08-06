@@ -18,8 +18,8 @@ import UpdateTrip from "../editTodos/editTodos";
 //   }, [id])
 // }
 
-export default function TodoDetail() {
-=======
+
+
 export default function TodoDetail(props) {
   const [todo, setTodo] = useState({});
   const [toggle, setToggle] = useState(false)
