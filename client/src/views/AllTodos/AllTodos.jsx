@@ -19,7 +19,7 @@ export default function Home(props) {
 
     return (
        
-        <Layout  
+        <div
         user={props.user} setUser={props.setUser}>
             <div  className=' min-h-screen lg:grid lg:grid-cols-3 md:grid md:grid-cols-3 hover:b '>
             {todos.map((todo) => (
@@ -41,6 +41,6 @@ export default function Home(props) {
                 </div>
             ))}
             </div>
-        </Layout>
+        </div>
     );
 }
