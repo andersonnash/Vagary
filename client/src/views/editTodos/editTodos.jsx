@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useParams} from "react-router-dom";
-import { useHistory } from "react-router";
 import Layout from "../../components/Layout/Layout";
 import { getOneTodo, updateTodo } from "../../services/todo";
 
@@ -18,7 +17,7 @@ const UpdateTrip = (props) => {
     });
 
     const { id } = useParams();
-    const history = useHistory();
+    
 
 
 
