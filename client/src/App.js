@@ -1,6 +1,6 @@
 import "./App.css";
 import ImgSlide from "./views/home/ImgSlide";
-import { SlideData } from "./views/home/SlideData";
+// import { SlideData } from "./views/home/SlideData";
 
 import { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
@@ -30,7 +30,8 @@ function App() {
     <div className="App">
       <Navbar />
       <Route exact path="/">
-        <ImgSlide slides={SlideData} />
+        {/* <ImgSlide slides={SlideData} /> */}
+        <ImgSlide />
       </Route>
       <Route path="/user-homepage">
         <UserHomePage />
