@@ -18,14 +18,18 @@ export default function Home(props) {
 
 
     return (
-        <Layout user={props.user} setUser={props.setUser}>
+       
+        <div
+        user={props.user} setUser={props.setUser}>
+            <div  className=' min-h-screen lg:grid lg:grid-cols-3 md:grid md:grid-cols-3 hover:b '>
             {todos.map((todo) => (
-                <div className="lg:grid lg:grid-ros-3 md:grid md:grid-cols-3 pt-32 mx-12">
-                    <div className='p-8 '>
-                        <div className="rounded overflow-hidden shadow-lg  bg-gray-800 relative transition duration-500 hover:opacity-70 transform ease-in-out hover:-translate-y-1 hover:scale-110">
+                <div className="p-10 pt-48 overflow-hidden">
+                    <div className="rounded overflow-hidden shadow-lg  bg-gray-700 relative  transition duration-500 hover:opacity-70 transform ease-in-out hover:-translate-y-1 hover:scale-110">
+                        <div >
                             <div className="text-white font-black capitalize">
-                                <Link to={`/todos/${todo._id}`}> <img className=" w-full h-32 object-cover" src={todo.imageURL} alt={todo.name} />
-                                    <div className="m-2">
+                            <img className=" w-full h-32 object-cover" src={todo.imageURL} alt={todo.name} />
+                                <Link to={`/todos/${todo._id}`}> 
+                                    <div className="m-4">
                                         {todo.name}
                                     </div>
                                 </Link>
@@ -35,8 +39,8 @@ export default function Home(props) {
                         </div>
                     </div>
                 </div>
-
             ))}
-        </Layout>
+            </div>
+        </div>
     );
 }

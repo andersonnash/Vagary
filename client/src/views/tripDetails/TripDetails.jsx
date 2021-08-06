@@ -1,12 +1,30 @@
 import { useState, useEffect } from "react";
+import { verify } from "../../services/user"
 // import { getUser } from "../../services/user";
-import { useParams } from "react-router-dom";
-import { getOneTodo } from "../../services/todo";
+import { useParams, useHistory } from "react-router-dom";
+import { getOneTodo, deleteOneTodo, updateTodo } from "../../services/todo";
 import Layout from "../../components/Layout/Layout";
+import UpdateTrip from "../editTodos/editTodos";
 
-export default function TodoDetail() {
+// export default function UserDetails() {
+//   const [user, setUser] = useState({})
+//   const { id } = useParams()
+
+//   useEffect(() => {
+//     const fetchUser = async () => {
+//       let data = await getUser(id)
+//       setUser(data)
+//     }
+//     fetchUser()
+//   }, [id])
+// }
+
+export default function TodoDetail(props) {
   const [todo, setTodo] = useState({});
+  const [toggle, setToggle] = useState(false);
   const { id } = useParams();
+  const history = useHistory();
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const fetchDetail = async () => {
@@ -14,59 +32,51 @@ export default function TodoDetail() {
       setTodo(data);
     };
     fetchDetail();
-  }, [id]);
+  }, [id, toggle]);
+
+  const handleDelete = async () => {
+    let data = await deleteOneTodo(todo._id);
+    history.push("/todos");
+  };
+
+ 
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const user = await verify();
+      user ? setUser(user) : setUser(null);
+    };
+    fetchUser();
+  }, []);
+
   return (
-    <Layout>
-      <div>
+    <>
+      <div className=" flex flex-col justify-center text-2xl">
+        {/* <h1>{user?.username}</h1> */}
         <h1>{todo?.name}</h1>
         <h2>{todo?.location}</h2>
         <img src={todo.imageURL} />
+        <p>{todo?.description}</p>
+        <p>{todo?.flightInfo}</p>
+        <p>{todo?.date}</p>
       </div>
-    </Layout>
+      
+{user && (
+      <button
+        onClick={handleDelete}
+        className="bg-red-400 hover:bg-red-700 text-white px-10 py-2 rounded-lg mt-5 mb-5 font-bold md:text-sm"
+      >
+        Delete
+      </button>
+      )}
+
+      {user && (
+      <UpdateTrip
+        user={props.user}
+        setUser={props.setUser}
+        setToggle={setToggle}
+      />
+      )}
+    </>
   );
 }
-
-// export default function Post() {
-//   let { id } = useParams();
-//   // let history = useHistory();
-//   const [user, setUser] = useState({});
-
-//   useEffect(() => {
-//     handleUser();
-//     // eslint-disable-next-line
-//   }, []);
-
-//   async function handleUser(props) {
-//     console.log(props);
-//     let res = await getUser(id);
-//     console.log(res);
-//     setUser(res.id);
-//   }
-
-//   // const handleDelete = async () => {
-//   //   await deleteUser(`${id}`);
-//   //   history.push("/user-homepage");
-//   // };
-//   console.log(getUser, "get user");
-//   return (
-//     <div>
-//       <h2>These are {user.username}'s trip details! </h2>
-//       <p>{user.email}</p>
-//       {/* <button value={user._id} onClick={handleDelete}>
-//         Delete User
-//       </button> */}
-//       <h3>{`Trips for ${user.username}:`}</h3>
-//       {user?.posts?.map((post) => {
-//         return (
-//           <div key={post._id}>
-//             <h3>
-//               <Link to={`/${user._id}`}>{post.title}</Link>
-//             </h3>
-//             <img src={post.imageURL} alt={post.title} />
-//             <p>{post.description}</p>
-//           </div>
-//         );
-//       })}
-//     </div>
-//   );
-// }

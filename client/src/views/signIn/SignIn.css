@@ -1,26 +1,97 @@
+.signin-form {
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+
+
+
+
 @media (prefers-reduced-motion: no-preference) {
 
-body {
-    background-color: #f4f0bb;
-}
-nav {
-    /* border-style: dotted; */
-    margin: 0;
-    margin-bottom: 30px;
-    height: 70px;
-}
-
-.signin-form {
-background-color: cornflowerblue;
-border-style: dotted;
-padding-top: 10px;
-display: flex;
-flex-direction: column;
-margin-top: 200px;
-}
-
-.signin-button {
-    border-style: groove;
-}
-
-}
+    body {
+        background-color: #f4f0bb;
+    }
+    nav {
+        /* border-style: dotted; */
+        margin: 0;
+        margin-bottom: 30px;
+        height: 70px;
+        font-size: 1.3rem;;
+    }
+    div.nav-items {
+        /* border: 1px solid black; */
+        border-bottom: 1px solid #fff;
+    }
+    h1{
+        border: none;
+        position: relative ;
+        bottom: 40px;
+        font-size: 30px;
+        font-weight: bold;
+        color: coral;
+        width: 150px;
+        align-self: center;
+    }
+    
+    input {
+        display: flex;
+        align-self: center;
+        padding: 5px 0;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background-color: transparent;
+        color: inherit;
+    
+    }
+    /* label on input line */
+    label {
+        font-size: 1rem;
+        pointer-events: none;
+        transition: .3s ease-out;
+    }
+    
+    .signin-div {
+        /* margin: 50px auto 50px; */
+        border: none;
+        display: flex;
+        margin-top: 190px;
+        margin-bottom: 100px;
+        
+    }
+    
+    .signin-form {
+        background-color: #05648A;
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        box-shadow: 
+            0 15px 25px rgba(3, 4, 5, 6);
+        border-radius: 10px;
+        width: 350px;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        
+    }
+    
+    .signin-button {
+        border: none; 
+        border-radius: 10px;
+       background: linear-gradient(90deg, rgba(255,127,80,1) 20%, rgba(255,212,150,1) 80%);
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        cursor: pointer;
+        
+    }
+    
+    
+    
+    }
