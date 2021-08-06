@@ -7,7 +7,7 @@ import UpdateTrip from "../editTodos/editTodos";
 
 export default function TodoDetail(props) {
   const [todo, setTodo] = useState({});
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
   const { id } = useParams();
   const history = useHistory();
 
@@ -17,14 +17,12 @@ export default function TodoDetail(props) {
       setTodo(data);
     };
     fetchDetail();
-
   }, [id, toggle]);
 
   const handleDelete = async () => {
     let data = await deleteOneTodo(todo._id);
     history.push("/todos");
   };
-
 
   return (
     <>
@@ -34,9 +32,17 @@ export default function TodoDetail(props) {
         <img src={todo.imageURL} />
       </div>
 
-      <button onClick={handleDelete} className="bg-red-400 hover:bg-red-700 text-white px-10 py-2 rounded-lg mt-5 mb-5 font-bold md:text-sm">Delete</button>
-      <UpdateTrip user={props.user} setUser={props.setUser} setToggle={setToggle} />
-
-    </Layout>
+      <button
+        onClick={handleDelete}
+        className="bg-red-400 hover:bg-red-700 text-white px-10 py-2 rounded-lg mt-5 mb-5 font-bold md:text-sm"
+      >
+        Delete
+      </button>
+      <UpdateTrip
+        user={props.user}
+        setUser={props.setUser}
+        setToggle={setToggle}
+      />
+    </>
   );
 }

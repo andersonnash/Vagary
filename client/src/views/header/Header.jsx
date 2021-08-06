@@ -5,7 +5,7 @@ const Header = (props) => {
   return (
     <div className="header-logo">
       <NavLink
-        className="flex justify-start text-black mr-8 font-serif  text-2xl pt-6"
+        className="flex justify-start text-black mr-8 font-serif  text-2xl pt-"
         to="/"
       >
         Vagary
