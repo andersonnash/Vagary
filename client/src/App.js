@@ -32,12 +32,11 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
       <Layout setUser={setUser} user={user}>
         {/* <Header /> */}
-        <Route exact path="/"></Route>
-        <ImgSlide />
-        {/* </Route> */}
+        <Route exact path="/">
+          <ImgSlide />
+        </Route>
         <Route path="/user-homepage">
           <UserHomePage />
         </Route>
