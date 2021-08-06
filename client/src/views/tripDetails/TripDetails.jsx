@@ -70,13 +70,25 @@ export default function TodoDetail(props) {
       </button>
       )}
 
+<<<<<<< HEAD
+      <button
+        onClick={handleDelete}
+        className="bg-red-400 hover:bg-red-700 text-white px-10 py-2 rounded-lg mt-5 mb-5 font-bold md:text-sm"
+      >
+        Delete
+      </button>
+=======
       {user && (
+>>>>>>> f799b5f31b8081d24337aebcb721e620cc1d74f4
       <UpdateTrip
         user={props.user}
         setUser={props.setUser}
         setToggle={setToggle}
       />
+<<<<<<< HEAD
+=======
       )}
+>>>>>>> f799b5f31b8081d24337aebcb721e620cc1d74f4
     </>
   );
 }
