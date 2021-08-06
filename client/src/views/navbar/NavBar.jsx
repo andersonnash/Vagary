@@ -45,7 +45,7 @@ const Navbar = (props) => {
   };
 
   return (
-    <nav>
+    <nav className="flex content-center justify-end">
       {isMobile ? (
         <div className="mobileClass">
           <img
@@ -64,15 +64,11 @@ const Navbar = (props) => {
           </div>
         </div>
       ) : (
-        <div className="flex">
-          <div className="desktopClass">
-            <div className="inline-block border border-blue-500 rounded py-1 px-3 bg-blue-500 text-white">
-              <NavLink to="/">Homepage</NavLink>
-              <NavLink to="/sign-in">Sign In</NavLink>
-              <NavLink to="/sign-up">Sign Up</NavLink>
-              <button onClick={handleSignOut}>Sign Out</button>
-            </div>
-          </div>
+        <div className="flex justify-end space-x-10  text-black mr-8 font-serif  text-2xl">
+          <NavLink to="/">Homepage</NavLink>
+          <NavLink to="/sign-in">Sign In</NavLink>
+          <NavLink to="/sign-up">Sign Up</NavLink>
+          <button onClick={handleSignOut}>Sign Out</button>
         </div>
       )}
     </nav>
