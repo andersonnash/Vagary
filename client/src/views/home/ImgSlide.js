@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 // import {SlideData} from './SlideData';
 // import image2 from './SlideData';
 // import image3 from './SlideData';
@@ -44,6 +45,11 @@ p {
   line-height: 1.1;
 }
 `;
+
+// const SlideShow = styled.div`
+// display: flex;
+// colo
+// `
 
 const Button = styled(motion.button)`
 padding: 1rem 3rem;
@@ -117,14 +123,19 @@ const ImgSlide = () => {
             variants={motionLeft}
             initial='hidden'
             animate='visible'
-            transition={{duration: 1}}
+            transition={{duration: 4}}
           
           >Destinations... Travel... Destinations...</motion.p>
-          <Button
+          <Link to="/sign-up"><Button
           whileTap={{scale: 1}}
           whileHover={{scale: 1.2}}
           
-          >Sign Up</Button>
+          >Sign Up</Button></Link>
+          <Link to="/sign-in"><Button
+            whileTap={{ scale: 1 }}
+            whileHover={{scale: 1.2}}
+          >
+            Sign In</Button></Link>
           <ColumnRight>
             <Image src={'https://i.imgur.com/F3nr777.png'} alt="images"
               drag={true}
