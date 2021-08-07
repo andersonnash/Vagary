@@ -50,9 +50,9 @@ export default function TodoDetail(props) {
   return (
     <>
       <div className="min-h-screen overflow-hidden md:flex md:justify-center md:items-center md:flex-col md:text-2xl lg:grid lg:grid-cols-2 lg:min-h-screen">
-        <p className="uppercase font-bold text-3xl pb-8">
+        <p className="uppercase font-black text-3xl pb-8 font-serif">
           {todo?.name}</p>
-        <h2 className="uppercase font-bold text-lg">
+        <h2 className="uppercase font-bold text-lg font-serif">
           {todo?.location}</h2>
         <div>
         <img className="px-4 py-14"
@@ -62,10 +62,18 @@ export default function TodoDetail(props) {
         <p className="px-4 py-2">
           {todo?.description}</p>
         </div>
-        <p className="text-lg font-mono mb-4">
-          {todo?.flightInfo}</p>
-        <p className="text-xl font-mono">
-          {todo?.date}</p>
+        <div className="text-lg font-mono mb-4">
+          <p className="text-sm">Flight Information: </p>
+          <div className="bg-gray-200 mx-6 py-2 rounded-2xl">
+          {todo?.flightInfo}
+          </div>
+          </div>
+        <div className="text-xl font-mono">
+        <p className="text-sm">Trip Dates:</p>
+        <div className="bg-gray-200 mx-6 rounded-2xl py-2" >
+        {todo?.date}</div>
+        </div>
+          
       </div>
       {user && (
         <button
