@@ -3,7 +3,6 @@ import { verify } from "../../services/user";
 // import { getUser } from "../../services/user";
 import { useParams, useHistory } from "react-router-dom";
 import { getOneTodo, deleteOneTodo, updateTodo } from "../../services/todo";
-import Layout from "../../components/Layout/Layout";
 import UpdateTrip from "../editTodos/editTodos";
 
 // export default function UserDetails() {
@@ -20,11 +19,26 @@ import UpdateTrip from "../editTodos/editTodos";
 // }
 
 export default function TodoDetail(props) {
+  const [seeEdit, setSeeEdit] = useState(false)
   const [todo, setTodo] = useState({});
   const [toggle, setToggle] = useState(false);
   const { id } = useParams();
   const history = useHistory();
   const [user, setUser] = useState(null);
+
+  const editContent = (
+    <UpdateTrip
+      user={props.user}
+      setUser={props.setUser}
+      setToggle={setToggle} />
+  );
+
+  const editName = seeEdit ? (
+    <p>Cancel</p>
+  ) : (
+    <p>Edit</p>
+  );
+
 
   useEffect(() => {
     const fetchDetail = async () => {
@@ -55,25 +69,25 @@ export default function TodoDetail(props) {
         <h2 className="uppercase font-bold text-lg font-serif">
           {todo?.location}</h2>
         <div>
-        <img className="px-4 py-14"
-        src={todo.imageURL} />
+          <img className="px-4 py-14"
+            src={todo.imageURL} />
         </div>
         <div className="bg-gray-200 mx-4 mb-4 border rounded-2xl">
-        <p className="px-4 py-2">
-          {todo?.description}</p>
+          <p className="px-4 py-2">
+            {todo?.description}</p>
         </div>
         <div className="text-lg font-mono mb-4">
           <p className="text-sm">Flight Information: </p>
           <div className="bg-gray-200 mx-6 py-2 rounded-2xl">
-          {todo?.flightInfo}
+            {todo?.flightInfo}
           </div>
-          </div>
-        <div className="text-xl font-mono">
-        <p className="text-sm">Trip Dates:</p>
-        <div className="bg-gray-200 mx-6 rounded-2xl py-2" >
-        {todo?.date}</div>
         </div>
-          
+        <div className="text-xl font-mono">
+          <p className="text-sm">Trip Dates:</p>
+          <div className="bg-gray-200 mx-6 rounded-2xl py-2" >
+            {todo?.date}</div>
+        </div>
+
       </div>
       {user && (
         <button
@@ -83,13 +97,13 @@ export default function TodoDetail(props) {
           Delete
         </button>
       )}
+
       {user && (
-        <UpdateTrip
-          user={props.user}
-          setUser={props.setUser}
-          setToggle={setToggle}
-        />
+        <button onClick={() => {
+          setSeeEdit(!seeEdit);
+        }}> <p className="bg-green-400 hover:bg-gray-700 text-white px-10 py-2 rounded-lg font-bold md:text-sm m-5">{editName}</p></button>
       )}
+      <article>{seeEdit && editContent}</article>
     </>
   );
 }
