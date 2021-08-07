@@ -62,7 +62,7 @@ export default function TodoDetail(props) {
         <p className="px-4 py-2">
           {todo?.description}</p>
         </div>
-        <p className="text-xl font-mono mb-4">
+        <p className="text-lg font-mono mb-4">
           {todo?.flightInfo}</p>
         <p className="text-xl font-mono">
           {todo?.date}</p>

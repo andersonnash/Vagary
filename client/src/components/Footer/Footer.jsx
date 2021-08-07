@@ -24,7 +24,7 @@ export default function Footer() {
 
                 <a href="https://github.com/tafariberesford" target="_blank" rel="noreferrer" className="transition duration-500 hover:opacity-70 transform ease-in-out hover:-translate-y-1 hover:scale-110">
                     <FaGithub className="mx-8"  size={30}/>
-                    <p>©Tafaro B</p>
+                    <p>©Tafari B</p>
                 </a>
 
             </div>

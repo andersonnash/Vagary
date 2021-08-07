@@ -55,7 +55,7 @@ const NewTodo = (props) => {
                             <br />
                             <label>Flight Information</label>
                             <br />
-                            <input id="flightInfo" value={input.flightInfo} onChange={handleChange} />
+                            <textarea id="flightInfo" value={input.flightInfo} onChange={handleChange} />
                             <br />
                             <br />
                             <label>Image</label>
@@ -65,7 +65,8 @@ const NewTodo = (props) => {
                             <br />
                             <label>Description</label>
                             <br />
-                            <textarea id="description" value={input.description} onChange={handleChange} />
+                            <textarea className="px-10 py-8"
+                                id="description" value={input.description} onChange={handleChange} />
                             <br />
                             <button className="bg-green-400 hover:bg-red-300  text-white text-xs  px-6 py-2 mt-6 mb-3 " type="submit">Submit</button>
                         </form>
