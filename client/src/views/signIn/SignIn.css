@@ -25,12 +25,10 @@
         margin: 0;
         margin-bottom: 30px;
         height: 70px;
+        padding-bottom: 20px;
         font-size: 1.3rem;;
     }
-    div.nav-items {
-        /* border: 1px solid black; */
-        border-bottom: 1px solid #fff;
-    }
+    
     h1{
         border: none;
         position: relative ;
@@ -67,7 +65,7 @@
         /* margin: 50px auto 50px; */
         border: none;
         display: flex;
-        margin-top: 190px;
+        margin-top: 250px;
         margin-bottom: 100px;
         
     }
