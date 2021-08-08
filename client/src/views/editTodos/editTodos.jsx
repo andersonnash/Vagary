@@ -68,7 +68,7 @@ const UpdateTrip = (props) => {
             <br />
             <label>Flight Information</label>
             <br />
-            <input
+            <textarea
               id="flightInfo"
               value={input.flightInfo}
               onChange={handleChange}
@@ -86,7 +86,7 @@ const UpdateTrip = (props) => {
             <br />
             <label>Description</label>
             <br />
-            <textarea
+            <textarea className="px-10 py-8"
               id="description"
               value={input.description}
               onChange={handleChange}
