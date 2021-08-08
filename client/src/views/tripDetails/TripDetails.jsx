@@ -63,7 +63,7 @@ export default function TodoDetail(props) {
 
   return (
     <>
-      <div className="min-h-screen overflow-hidden md:flex md:justify-center md:items-center md:flex-col md:text-2xl lg:grid lg:grid-cols-2 lg:min-h-screen">
+      <div className="min-h-screen pt-60 overflow-hidden md:flex md:justify-center md:items-center md:flex-col md:text-2xl lg:grid lg:grid-cols-2 lg:min-h-screen">
         <p className="uppercase font-black text-3xl pb-8 font-serif">
           {todo?.name}</p>
         <h2 className="uppercase font-bold text-lg font-serif">
@@ -99,9 +99,11 @@ export default function TodoDetail(props) {
       )}
 
       {user && (
-        <button onClick={() => {
+        <button 
+        className="bg-green-400 hover:bg-gray-700 text-white px-10 py-2 rounded-lg font-bold md:text-sm m-5"
+        onClick={() => {
           setSeeEdit(!seeEdit);
-        }}> <p className="bg-green-400 hover:bg-gray-700 text-white px-10 py-2 rounded-lg font-bold md:text-sm m-5">{editName}</p></button>
+        }}>{editName}</button>
       )}
       <article>{seeEdit && editContent}</article>
     </>
