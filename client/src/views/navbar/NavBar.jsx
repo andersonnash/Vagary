@@ -59,7 +59,7 @@ const Navbar = (props) => {
 
   return (
     <>
-      <nav class="flex justify-end flex-wrap content-center pr-10 text-2xl">
+      <nav>
         {isMobile ? (
           <div className="mobileClass">
             <img
