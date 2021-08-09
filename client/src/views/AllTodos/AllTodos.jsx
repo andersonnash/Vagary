@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import Layout from "../../components/Layout/Layout";
+
 import { getAllTodos } from "../../services/todo.js";
 import { Link } from "react-router-dom";
 
 export default function Home(props) {
     const [todos, setTodos] = useState([]);
-    const { id } = props;
+    
 
     useEffect(() => {
         const fetchTodos = async () => {
