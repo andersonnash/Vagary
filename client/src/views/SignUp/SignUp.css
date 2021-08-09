@@ -6,6 +6,9 @@
     align-self: center;
     padding-bottom: 160px;
 }
+nav {
+    margin-bottom: 0px;
+}
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -16,7 +19,7 @@
     nav {
         /* border-style: dotted; */
         margin: 0;
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
         height: 70px;
         width: 100%;
     }
