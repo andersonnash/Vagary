@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react";
 import Dropdown from "../../views/navbar/Dropdown";
-import Navbar from "../../views/navbar/NavBar";
 import Footer from "../Footer/Footer";
 import Navigation from "../../views/navbar/Navigation";
 
