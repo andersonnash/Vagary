@@ -36,8 +36,6 @@ export default function TodoDetail(props) {
 
   const editName = seeEdit ? <p>Close</p> : <p>Edit</p>;
 
-  const editName = seeEdit ? <p>Cancel</p> : <p>Edit</p>;
-
   useEffect(() => {
     const fetchDetail = async () => {
       let data = await getOneTodo(id);
@@ -48,8 +46,8 @@ export default function TodoDetail(props) {
 
   const handleDelete = async () => {
     let data = await deleteOneTodo(todo._id);
-    return data;
     history.push("/todos");
+    return data;
   };
 
   useEffect(() => {

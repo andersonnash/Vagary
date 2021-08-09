@@ -11,7 +11,7 @@ import Layout from "./components/Layout/Layout";
 import SignUp from "./views/SignUp/SignUp";
 import TripDetails from "./views/tripDetails/TripDetails";
 import NewTodo from "./views/createTodo/CreateTodo";
-import SignOut from './views/SignOut/SignOut';
+import SignOut from "./views/SignOut/SignOut";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -29,7 +29,7 @@ function App() {
       <Layout setUser={setUser} user={user}>
         {/* <Header /> */}
         <Route exact path="/">
-          <ImgSlide />
+          <ImgSlide user={user} />
         </Route>
         <Route path="/sign-in">
           <SignIn setUser={setUser} user={user} />
@@ -44,15 +44,14 @@ function App() {
           <SignUp setUser={setUser} user={user} />
         </Route>
         {user && (
-        <Route path="/sign-out">
-          <SignOut setUser={setUser} />
-        </Route>
+          <Route path="/sign-out">
+            <SignOut setUser={setUser} />
+          </Route>
         )}
         {user && (
           <Route path="/new-todo">
             <NewTodo setUser={setUser} user={user} />
           </Route>
-          
         )}
       </Layout>
     </div>
