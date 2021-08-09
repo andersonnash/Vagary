@@ -4,9 +4,10 @@ import jwtDecode from "jwt-decode";
 export const signUp = async (credentials) => {
   try {
     const res = await api.post("/sign-up", credentials);
-    localStorage.setItem("token", res.data.token);
-    // let user = jwtDecode(res.data.token);
-    return res.data;
+    console.log(res.data);
+    localStorage.setItem("token", res.data);
+    let user = jwtDecode(res.data);
+    return user;
   } catch (e) {
     throw e;
   }
@@ -36,7 +37,7 @@ export const verify = async () => {
 
 export const signOut = async () => {
   try {
-    localStorage.removeItem('token');
+    localStorage.removeItem("token");
     return true;
   } catch (error) {
     throw error;
