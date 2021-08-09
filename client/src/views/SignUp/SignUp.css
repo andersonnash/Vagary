@@ -1,6 +1,6 @@
 
 .signup-div {
-    /* border: 2px solid black; */
+    
     display: flex;
     justify-content: center;
     align-self: center;
@@ -15,9 +15,9 @@
         background-color: rgb(245, 240, 240);
     }
     nav {
-        /* border-style: dotted; */
+        
         margin: 0;
-        /* margin-bottom: 30px; */
+        
         height: 70px;
         width: 100%;
     }
@@ -46,15 +46,10 @@
         color: inherit;
     
     }
-    /* label on input line */
-    label {
-        font-size: 1rem;
-        pointer-events: none;
-        transition: .3s ease-out;
-    }
+    
     
     .signup-div {
-        /* margin: 50px auto 50px; */
+        
         border: none;
         display: flex;
         margin-top: 250px;

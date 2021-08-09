@@ -24,7 +24,7 @@ export const signIn = async (credentials) => {
 
 export const verify = async () => {
   try {
-    const token = localStorage.getItem("token");
+    // const token = localStorage.getItem("token");
     const res = await api.get("/verify");
     console.log(res.data);
     return res.data;
