@@ -34,6 +34,8 @@ export default function TodoDetail(props) {
     />
   );
 
+  const editName = seeEdit ? <p>Close</p> : <p>Edit</p>;
+
   const editName = seeEdit ? <p>Cancel</p> : <p>Edit</p>;
 
   useEffect(() => {
@@ -60,8 +62,8 @@ export default function TodoDetail(props) {
 
   return (
     <>
-      <div className="min-h-screen overflow-hidden md:flex md:justify-center md:items-center md:flex-col md:text-2xl lg:grid lg:grid-cols-2 lg:min-h-screen">
-        <p className="uppercase font-black text-3xl pb-8 font-serif">
+      <div className="min-h-screen pt-8 overflow-hidden md:flex md:justify-center md:items-center md:flex-col md:text-2xl lg:grid lg:grid-cols-2 lg:min-h-screen">
+        <p className="capitalized font-black text-3xl pb-8 font-serif">
           {todo?.name}
         </p>
         <h2 className="uppercase font-bold text-lg font-serif">
