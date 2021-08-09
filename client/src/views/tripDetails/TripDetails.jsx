@@ -63,7 +63,7 @@ export default function TodoDetail(props) {
 
   return (
     <>
-      <div className="min-h-screen pt-60 overflow-hidden md:flex md:justify-center md:items-center md:flex-col md:text-2xl lg:grid lg:grid-cols-2 lg:min-h-screen">
+      <div className="min-h-screen overflow-hidden md:flex md:justify-center md:items-center md:flex-col md:text-2xl lg:grid lg:grid-cols-2 lg:min-h-screen">
         <p className="uppercase font-black text-3xl pb-8 font-serif">
           {todo?.name}</p>
         <h2 className="uppercase font-bold text-lg font-serif">

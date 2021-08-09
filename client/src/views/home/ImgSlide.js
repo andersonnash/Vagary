@@ -105,6 +105,7 @@ const ImgSlide = () => {
     visible: {opacity: 1, x: 0}
   }
   return (
+    <div className="min-h-screen">
     <Section>
       <Container>
         <ColumnLeft>
@@ -150,6 +151,7 @@ const ImgSlide = () => {
         </ColumnLeft>
       </Container>
     </Section>
+    </div>
   )
 }
 
