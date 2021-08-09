@@ -11,12 +11,12 @@
 
 @media (prefers-reduced-motion: no-preference) {
   nav {
-    /* border-style: dotted; */
+    
     margin-bottom: 30px;
     height: 70px;
   }
   .mobileClass {
-    /* border-style: dotted; */
+    
     padding-bottom: 70px;
     width: 100%;
     margin-bottom: 120px;
@@ -26,10 +26,7 @@
   .bars {
     width: 40px;
     padding: 5px 5px 5px 5px;
-    /* border-style: dotted; */
-    /* background-color: #ff9d69; */
-    /* light(end of gradient) bg bottom darker(begin of gradient) top */
-    /* background-color: #ffd496; */
+    
     
     float: right;
     margin-top: 15px;
