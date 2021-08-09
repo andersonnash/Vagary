@@ -7,7 +7,7 @@ function Dropdown({ isOpen, toggle, user },) {
     <div
       className={
         isOpen
-          ? "grid grid-rows-4 text-center items-center "
+          ? "grid grid-rows-4 text-center items-center font-bold"
           : "hidden"
       }
       onClick={toggle}

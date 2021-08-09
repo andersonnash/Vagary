@@ -1,5 +1,5 @@
 import "./App.css";
-// import "./views/navbar/navbar.css";
+import "./views/navbar/navbar.css";
 import "./views/tripDetails/tripDetails.css";
 import ImgSlide from "./views/home/ImgSlide";
 import { useState, useEffect } from "react";
