@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { signUp } from "../../services/user";
-import Layout from "../../components/Layout/Layout";
+
 import "./SignUp.css";
 
 export default function SignUp() {
@@ -29,7 +29,7 @@ export default function SignUp() {
                 <form className ="signup-form" onSubmit={handleSubmit}>
                     <h1> Sign Up</h1>
                     
-                    {/* <label className="username">Username</label> */}
+                    
                     <input
                     placeholder="Username"
                         id="username"
@@ -37,7 +37,7 @@ export default function SignUp() {
                         value={input.username}
                         onChange={handleInput}
                     />
-                    {/* <label className="emaillabel">Email</label> */}
+                    
                     <input
                     placeholder="Email"
                         id="email"
@@ -45,7 +45,7 @@ export default function SignUp() {
                         value={input.email}
                         onChange={handleInput}
                     />
-                    {/* <label className="passwordlabel">Password</label> */}
+                    
                     <input
                     placeholder="Password"
                         id="password"
