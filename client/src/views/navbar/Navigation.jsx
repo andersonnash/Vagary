@@ -6,7 +6,7 @@ export default function Navigation({ user, toggle },) {
    
   
   return (
-    <nav className="flex justify-between items-center h-16 bg- text-black relative shadow-sm font-serif">
+    <nav className="flex justify-between items-center h-16 bg- text-black relative shadow-sm font-serif font-bold">
       <Link to="/" className="pl-8">
         Vagary
       </Link>
