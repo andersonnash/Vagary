@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-// import {SlideData} from './SlideData';
-// import image2 from './SlideData';
-// import image3 from './SlideData';
-// import image4 from './SlideData';
+
+const media = {
+  desktop: `@media screen and (max-width: 600px)`
+}
 
 const Section = styled.section`
 height: 100vh;
@@ -21,9 +21,8 @@ grid-template-columns: 1fr 1fr;
 height: 100vh;
 padding: 3rem calc((100vw - 1300px) /2);
 
-@media screen and (max-width: 768px) {
-  grid-template-columns: 1fr;
 }
+
 `;
 
 const ColumnLeft = styled.div`
@@ -34,22 +33,17 @@ justify-content: center;
 align-items: flex-start;
 padding: 5rem 2rem;
 
-h1 {
-  margin-bottom: 0.5rem;
-  font-size: 2rem;
-}
 
 p {
   margin: 2rem 0;
   font-size: 4rem;
   line-height: 1.1;
+  @media screen and (max-width: 600px) {
+    font-size: 15px;
+  }
 }
 `;
 
-// const SlideShow = styled.div`
-// display: flex;
-// colo
-// `
 
 const Button = styled(motion.button)`
 padding: 1rem 3rem;
@@ -66,8 +60,10 @@ const Image = styled(motion.img)`
 position: absolute;
 width: 100%;
 height: 100%;
+// height: 30px;
 max-width: 350px;
 max-height: 350px;
+
 `;
 
 const ColumnRight = styled.div`
@@ -77,25 +73,49 @@ align-items: center;
 padding: 2rem;
 position: relative;
 
+@media screen and (max-width: 768px) {
+  grid-template-columns: 1fr;
+}
+
 ${Image}:nth-child(1) {
   bottom: 65px;
   left: 250px;
   border-radius: 50%;
+
+  @media screen and (max-width: 600px) {
+    bottom: 370px;
+    left: 270px;
+  }
 }
 ${Image}:nth-child(2) {
   bottom: 65px;
   left: 320px;
   border-radius: 50%;
+
+  @media screen and (max-width: 600px) {
+    bottom: 270px;
+    left: 270px;
+  }
 }
 ${Image}:nth-child(3) {
   bottom: 65px;
   left: 390px;
   border-radius: 50%;
+
+  @media screen and (max-width: 600px) {
+    bottom: 170px;
+    left: 270px;
+  }
 }
 ${Image}:nth-child(4) {
   bottom: 65px;
   left: 460px;
   border-radius: 50%;
+
+  @media screen and (max-width: 600px) {
+    bottom: 70px;
+    left: 270px;
+  }
 }
 `;
 
