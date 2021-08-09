@@ -33,7 +33,7 @@ const NewTodo = (props) => {
     return (
         <div
             user={props.user} setUser={props.setUser}>
-            <div className=" min-h-screen shadow-2xl px-8 pb-10 mb-4 font-serif pt-40  ">
+            <div className=" min-h-screen shadow-2xl px-44 pb-10 mb-4 font-serif  ">
                 <h3 className=" flex  lg:flex lg:justify-center lg:items-center justify-center font-bold uppercase text-black text-2xl italic font-mono">Add New Trip</h3>
                 <div>
                     <div className=" bg-gray-300 text-black flex justify-center rounded-lg mt-14 py-5 shadow-2xl md:mx-60 lg:mx-80 ">

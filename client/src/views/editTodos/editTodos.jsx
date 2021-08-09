@@ -40,7 +40,7 @@ const UpdateTrip = (props) => {
   };
 
   return (
-    <div className=" min-h-screen shadow-2xl px-8 pb-10 mb-4 font-serif pt-40  ">
+    <div className=" min-h-screen shadow-2xl px-44 pb-10 mb-4 font-serif pt-5">
       <h3 className=" flex  lg:flex lg:justify-center lg:items-center justify-center font-bold uppercase text-black text-2xl italic font-mono">
         Edit Trip
       </h3>
