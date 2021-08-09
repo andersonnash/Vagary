@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { signUp } from "../../services/user";
 
 import "./SignUp.css";
 
 export default function SignUp() {
   const [input, setInput] = useState({ username: "", email: "", password: "" });
+  const history = useHistory();
 
 
 
@@ -12,6 +14,7 @@ export default function SignUp() {
         e.preventDefault();
         const user = await signUp(input);
         console.log(user);
+        history.push("/")
     };
 
     
