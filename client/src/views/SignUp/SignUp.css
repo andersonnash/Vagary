@@ -8,6 +8,7 @@
 }
 
 
+
 @media (prefers-reduced-motion: no-preference) {
 
     body {
@@ -16,7 +17,7 @@
     nav {
         /* border-style: dotted; */
         margin: 0;
-        margin-bottom: 30px;
+        /* margin-bottom: 30px; */
         height: 70px;
         width: 100%;
     }
