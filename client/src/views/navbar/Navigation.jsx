@@ -8,7 +8,7 @@ export default function Navigation({ user, toggle }) {
         Vagary
       </Link>
       {user && (
-        <Link to="/" className="p-3 mt-5 bg-black text-white rounded-3xl">
+        <Link to="/" className=" mt-2 p-2 text-sm bg-gray-200 text-black rounded-3xl font-serif lg:p-3 lg:mt-5 lg:text-lg">
           {" "}
           Welcome {user.username} !
         </Link>
