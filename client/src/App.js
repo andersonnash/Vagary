@@ -34,14 +34,11 @@ function App() {
       <Route path="/sign-in">
         <SignIn />
       </Route>
-<<<<<<< HEAD
       <Route exact path to="/posts:id">
         <TripDetails />
       </Route>
-=======
       <Route path="/todos">
         <AllTodos user={user} />
->>>>>>> 91db46428500485a776b0f2ad149ec359b8250e4
       <Route path="/sign-up">
         <SignUp />
       </Route>

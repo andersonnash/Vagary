@@ -7,14 +7,10 @@ const getToken = () => {
 };
 
 const api = axios.create({
-<<<<<<< HEAD
   baseURL:
-    process.env.NODE_ENV === "production" ? "" : "http://localhost:4567/api",
-=======
-  baseURL: process.env.NODE_ENV === 'production'
-  ? ""
-  : "http://localhost:4567/api",
->>>>>>> 91db46428500485a776b0f2ad149ec359b8250e4
+    process.env.NODE_ENV === "production"
+      ? "https://vagary-api.herokuapp.com/api"
+      : "http://localhost:4567/api",
 });
 
 axios.interceptors.request.use(
