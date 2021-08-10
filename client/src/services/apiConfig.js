@@ -13,7 +13,7 @@ const api = axios.create({
       : "http://localhost:4567/api",
 });
 
-axios.interceptors.request.use(
+api.interceptors.request.use(
   async (config) => {
     config.headers["Authorization"] = await getToken();
     return config;

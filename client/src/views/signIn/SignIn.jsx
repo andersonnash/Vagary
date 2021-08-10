@@ -1,58 +1,7 @@
-import {useState} from "react";
-import {signIn} from "../../services/users"
-import { useHistory } from "react-router-dom";
-
-
-export default function SignIn(props) {
-    const [input, setInput] = useState({email: "", username: "", password: ""})
-    const { setUser} = props
-    const history = useHistory();
-
-const handleSubmit = async(e) => {
-    e.preventDefault()
-    const user = await SignIn(input)
-    setUser(user)
-    history.push("/");
-}
-
-const handleInput = (e) => {
-    const { id, value} = e.target
-    setInput((prevInput) => ({
-        ...prevInput,
-        [id]: value
-    }))
-}
-
-    return (
-      <div>
-        Sign In
-        <form className="signin-form" onSubmit={handleSubmit}>
-            <label>Email</label>
-            <input 
-            id="email"
-            type="email"
-            value={input.email}
-            onChange={handleInput}/>
-            <br />
-
-            <label>Password</label>
-            <input 
-            id="password"
-            type="password"
-            value={input.password}
-            onChange={handleInput}
-            />
-            <br />
-
-            <button>Sign In</button>
-        </form>
-      </div>  
-    )
-}
 import { useState } from "react";
-// import { signIn } from "../../services/user";
+import { signIn } from "../../services/user";
 import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
+import "./SignIn.css";
 
 export default function SignIn(props) {
   const [input, setInput] = useState({ email: "", username: "", password: "" });
@@ -61,7 +10,7 @@ export default function SignIn(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const user = await SignIn(input);
+    const user = await signIn(input);
     setUser(user);
     history.push("/");
   };
@@ -75,11 +24,14 @@ export default function SignIn(props) {
   };
 
   return (
-    <div>
-      Sign In
+    <div className="signin-div">
       <form className="signin-form" onSubmit={handleSubmit}>
-        <label>Email</label>
+
+        <h1>Sign In</h1>
+
+        
         <input
+          placeholder="Email"
           id="email"
           type="email"
           value={input.email}
@@ -87,17 +39,17 @@ export default function SignIn(props) {
         />
         <br />
 
-        <label>Password</label>
+        
         <input
+          placeholder="Password"
           id="password"
           type="password"
           value={input.password}
           onChange={handleInput}
         />
         <br />
-{/* Once button is clicked it goes to UserPage */}
-        <button >
-            <Link to="userpage">Sign In</Link></button>
+
+        <button className="signin-button">Sign In</button>
       </form>
     </div>
   );
