@@ -132,39 +132,38 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Seting up API Config    |    H     |     1.5 hrs      |      hrs     |     hrs    
-| Connections         |    H     |      1hrs      |      hrs     |     TBD     |
-| Server              |    H     |      1hrs      |      hrs     |     TBD     |
-| User Controller      |    H     |      2hrs      |      hrs     |     TBD     |
-| Todo Controller      |    H     |     2hrs      |      hrs     |     TBD     |
-| User Model          |    H     |     2 hrs      |      hrs     |     TBD     |
-| Todo Model          |    H     |      2hrs      |      hrs     |     TBD     |
-| Itinerary Model     |    H     |      3hrs      |      hrs     |     TBD     |
-| Navbar              |    H     |     2hrs      |      hrs     |     TBD     |
-| Header              |    H     |      2hrs      |      hrs     |     TBD     |
-| Footer              |    H     |      2hrs      |      hrs     |     TBD     |
-| Hamburger Menu      |    H     |      2hrs      |      hrs     |     TBD     |
-| Media Query         |    H     |      2hrs      |      hrs     |     TBD     |
-| Rendering Data      |    H     |      3hrs      |      hrs     |     TBD     |
-| Galery Slideshow    |    H     |      3hrs      |      hrs     |     TBD     |
-| User Profile Page   |    H     |      3hrs      |      hrs     |     TBD     |
-| Edit Page           |    H     |      3hrs      |      hrs     |     TBD     |
-| Routes              |    H     |     2 hrs      |      hrs     |     TBD     |
-| Postman Trials      |    H     |     2 hrs      |      hrs     |     TBD     |
-| Itinerary View      |    H     |      3hrs      |      hrs     |     TBD     |
-| Sign Up View        |    H     |     2 hrs      |      hrs     |     TBD     |
-| Sign In View        |    H     |     2 hrs      |      hrs     |     TBD     |
-| Create View         |    H     |     2 hrs      |      hrs     |     TBD     |
-| Update View         |    H     |     2 hrs      |      hrs     |     TBD     |
-| Homepage View       |    H     |      2hrs      |      hrs     |     TBD     |
-| Edit View           |    H     |     2 hrs      |      hrs     |     TBD     |
-| Delete              |    H     |     3 hrs      |      hrs     |     TBD     |
-| Media Query         |    H     |     2 hrs      |      hrs     |     TBD     |
-| CSS                 |    H     |     3 hrs      |      hrs     |     TBD     |
-| Tailwind            |    H     |     3 hrs      |      hrs     |     TBD     |
-| Netlify Deploy      |    H     |     1 hrs      |      hrs     |     TBD     |
-| Heroku Deployment   |    H     |     1 hrs      |      hrs     |     TBD     |
-| TOTAL               |          |     60 hrs     |     hrs      |     TBD     |
+| Seting up API Config    |    H     |     1.5 hrs      |      1.5hrs     |     1.5hrs    
+| Connections         |    H     |      1hrs      |      1hr     |     1hr     |
+| Server              |    H     |      1hrs      |      2hrs     |     2hrs     |
+| User Controller      |    H     |      2hrs      |      2hrs     |     2hrs     |
+| Todo Controller      |    H     |     2hrs      |      2hrs     |     2hrs     |
+| User Model          |    H     |     2 hrs      |      1hrs     |     1hrs     |
+| Todo Model          |    H     |      2hrs      |      1hrs     |     1hrs     |
+| Itinerary Model     |    H     |      3hrs      |      1hrs     |     1hrs     |
+| Navbar              |    H     |     2hrs      |      2.5hrs     |     2.5hrs     |
+| Header              |    H     |      2hrs      |      2.5hrs     |     2.5hrs     |
+| Footer              |    H     |      2hrs      |      2.5hrs     |     2.5hrs     |
+| Hamburger Menu      |    H     |      2hrs      |      2hrs     |     2hrs     |
+| Media Query         |    H     |      2hrs      |      4hrs     |     4hrs     |
+| Rendering Data      |    H     |      3hrs      |      3hrs     |     3hrs     |
+| Galery Slideshow    |    H     |      3hrs      |      4hrs     |     4hrs     |
+| User Profile Page   |    H     |      3hrs      |      3hrs     |     3hrs     |
+| Edit Page           |    H     |      3hrs      |      3hrs     |     3hrs     |
+| Routes              |    H     |     2 hrs      |      1.5hrs     |     1.5hrs     |
+| Postman Trials      |    H     |     2 hrs      |      1hr     |     1hr     |
+| Itinerary View      |    H     |      3hrs      |      3hrs     |     3hrs     |
+| Sign Up View        |    H     |     2 hrs      |      3hrs     |     3hrs     |
+| Sign In View        |    H     |     2 hrs      |      3hrs     |     3hrs     |
+| Create View         |    H     |     2 hrs      |      2hrs     |     2hrs     |
+| Update View         |    H     |     2 hrs      |      2hrs     |     2hrs     |
+| Homepage View       |    H     |      2hrs      |      2hrs     |     2hrs     |
+| Edit View           |    H     |     2 hrs      |      2hrs     |     2hrs     |
+| Delete              |    H     |     3 hrs      |      2hrs     |     2hrs     |
+| CSS                 |    H     |     3 hrs      |      3.5hrs     |     3.5hrs     |
+| Tailwind            |    H     |     3 hrs      |      3hrs     |     3hrs     |
+| Netlify Deploy      |    H     |     1 hrs      |      .5hrs     |     .5hrs     |
+| Heroku Deployment   |    H     |     1 hrs      |      .5hrs     |     .5hrs     |
+| TOTAL               |          |     60 hrs     |     67hrs      |     67hours     |
 
 
 
